@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EROTRAVERSE — тренировки тазового дна для женщин</title>
+<meta name="description" content="EROTRAVERSE — женский интимный фитнес. Офлайн-тренировки мышц тазового дна: сила, здоровье и чувственность. Пробное занятие, абонемент или онлайн по запросу.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --plum: #5b2a4a;
+    --plum-deep: #3a1830;
+    --rose: #c9748f;
+    --rose-light: #f3c3d1;
+    --blush: #f5e4e6;
+    --cream: #fdf8f5;
+    --white: #ffffff;
+    --ink: #2b1d26;
+    --muted: #6d5a65;
+    --line: #ecdcdf;
+    --radius: 22px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0;
+    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    line-height: 1.08;
+    margin: 0;
+  }
+  p { margin: 0; }
+  a { color: inherit; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+
+  /* ---------- Кнопки ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 54px;
+    padding: 0 28px;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .15s ease, background-color .2s ease, color .2s ease;
+  }
+  .btn:active { transform: scale(.98); }
+  .btn:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
+  .btn-primary { background: var(--plum); color: var(--cream); }
+  .btn-primary:hover { background: var(--plum-deep); }
+  .btn-light { background: var(--cream); color: var(--plum-deep); }
+  .btn-light:hover { background: var(--blush); }
+  .btn-ghost { border-color: rgba(253, 248, 245, .55); color: var(--cream); background: transparent; }
+  .btn-ghost:hover { background: rgba(253, 248, 245, .1); }
+  .btn-outline { border-color: var(--plum); color: var(--plum); background: transparent; }
+  .btn-outline:hover { background: var(--plum); color: var(--cream); }
+  .btn-block { width: 100%; }
+  .tg-icon { width: 20px; height: 20px; flex: none; }
+
+  /* ---------- Шапка ---------- */
+  .top {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(253, 248, 245, .92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+  .logo { font-weight: 700; letter-spacing: .18em; font-size: 15px; color: var(--plum-deep); text-decoration: none; }
+  .top .btn { min-height: 40px; padding: 0 18px; font-size: 14px; }
+
+  /* ---------- 1. Главный экран ---------- */
+  .hero {
+    color: var(--cream);
+    background:
+      radial-gradient(120% 80% at 100% 0%, rgba(201, 116, 143, .55) 0%, transparent 60%),
+      radial-gradient(90% 70% at 0% 100%, rgba(201, 116, 143, .25) 0%, transparent 60%),
+      linear-gradient(160deg, var(--plum) 0%, var(--plum-deep) 100%);
+  }
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 7px 14px;
+    border: 1px solid rgba(253, 248, 245, .35);
+    border-radius: 999px;
+    margin-bottom: 22px;
+  }
+  .hero h1 { font-size: clamp(2.5rem, 9vw, 4.4rem); max-width: 15ch; }
+  .hero h1 em { font-style: italic; font-weight: 500; color: var(--rose-light); }
+  .hero-for { margin-top: 20px; font-size: 18px; max-width: 36rem; opacity: .92; }
+  .hero-offer {
+    margin-top: 22px;
+    max-width: 36rem;
+    padding: 16px 18px;
+    border-radius: 16px;
+    background: rgba(253, 248, 245, .1);
+    border: 1px solid rgba(253, 248, 245, .2);
+  }
+  .hero-offer strong { color: var(--rose-light); font-weight: 600; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .hero-actions .btn { flex: 1 1 220px; }
+  .hero-facts { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 30px 0 0; padding: 0; list-style: none; font-size: 15px; opacity: .85; }
+  .hero-facts li::before { content: "✦"; margin-right: 8px; color: var(--rose-light); }
+
+  /* ---------- Секции ---------- */
+  section { padding-block: 64px; }
+  .hero { padding-block: 56px 64px; }
+  .section-title { font-size: clamp(2.1rem, 6.5vw, 3.1rem); color: var(--plum-deep); }
+  .section-lead { margin-top: 14px; color: var(--muted); max-width: 42rem; font-size: 18px; }
+  .section-lead p + p { margin-top: 12px; }
+
+  /* ---------- 2. Описание и профиты ---------- */
+  .for-title { margin-top: 36px; font-size: 1.7rem; color: var(--plum-deep); }
+  .for-list { display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
+  .for-list li {
+    position: relative;
+    padding: 14px 16px 14px 48px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+  .for-list li::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 19px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--blush);
+    box-shadow: inset 0 0 0 5px var(--rose);
+  }
+
+  .benefits { padding-top: 0; }
+  .cards { display: grid; gap: 14px; margin-top: 30px; }
+  .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 22px; }
+  .card-icon {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: var(--blush);
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+  .card h3 { font-size: 1.6rem; color: var(--plum-deep); }
+  .card p { margin-top: 8px; color: var(--muted); }
+
+  .inside { background: var(--blush); }
+  .steps { counter-reset: step; display: grid; gap: 14px; margin: 30px 0 0; padding: 0; list-style: none; }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    background: var(--cream);
+    border-radius: var(--radius);
+    padding: 22px 22px 22px 76px;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--plum);
+    color: var(--cream);
+    font-weight: 700;
+  }
+  .steps h3 { font-size: 1.5rem; color: var(--plum-deep); }
+  .steps p { margin-top: 4px; color: var(--muted); }
+
+  .note {
+    margin-top: 26px;
+    padding: 16px 18px;
+    border-left: 4px solid var(--rose);
+    background: var(--cream);
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  /* ---------- 3. Три кнопки-заявки ---------- */
+  .formats { display: grid; gap: 14px; margin-top: 30px; }
+  .format {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 26px 22px;
+  }
+  .format-tag { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--rose); }
+  .format h3 { margin-top: 6px; font-size: 1.9rem; color: var(--plum-deep); }
+  .format p { margin: 8px 0 22px; color: var(--muted); flex: 1; }
+  .format-accent { background: var(--plum); border-color: var(--plum); color: var(--cream); }
+  .format-accent h3 { color: var(--cream); }
+  .format-accent p { color: rgba(253, 248, 245, .82); }
+  .format-accent .format-tag { color: var(--rose-light); }
+  .formats-hint { margin-top: 18px; font-size: 15px; color: var(--muted); text-align: center; }
+
+  /* ---------- Подвал ---------- */
+  .footer { background: var(--plum-deep); color: rgba(253, 248, 245, .8); padding-block: 36px; font-size: 15px; }
+  .footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 30px; align-items: center; justify-content: space-between; }
+  .footer .logo { color: var(--cream); }
+
+  /* ---------- Планшет и компьютер ---------- */
+  @media (min-width: 640px) {
+    .cards, .for-list, .steps { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 960px) {
+    section { padding-block: 96px; }
+    .hero { padding-block: 104px 112px; }
+    .benefits { padding-top: 0; }
+    .hero-actions .btn { flex: 0 0 auto; }
+    .cards, .formats { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top">EROTRAVERSE</a>
+    <a class="btn btn-primary" href="#zapis">Записаться</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. Главный экран: название, для кого, оффер -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Офлайн-тренировки для женщин</span>
+      <h1>EROTRAVERSE — <em>интимный фитнес</em> для силы и чувственности</h1>
+      <p class="hero-for">
+        Для женщин, которые хотят укрепить мышцы тазового дна, лучше чувствовать своё тело
+        и позаботиться о женском здоровье — в любом возрасте.
+      </p>
+      <p class="hero-offer">
+        <strong>Начните с пробного занятия:</strong> познакомьтесь с практикой и тренером
+        и поймите, подходит ли вам формат, — без долгих обязательств.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="https://t.me/+gFJLybr_aoUxNDgy" data-telegram="trial" target="_blank" rel="noopener">Записаться на пробное</a>
+        <a class="btn btn-ghost" href="#zapis">Все форматы</a>
+      </div>
+      <ul class="hero-facts">
+        <li>Занятия в студии</li>
+        <li>Спокойная женская атмосфера</li>
+        <li>Бережный подход</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2. Описание тренировки -->
+  <section id="o-trenirovke">
+    <div class="wrap">
+      <h2 class="section-title">Что такое EROTRAVERSE</h2>
+      <div class="section-lead">
+        <p>
+          Это тренировка мышц тазового дна вместе с дыханием и глубокими мышцами корпуса.
+          Этих мышц не видно в зеркале, но именно они поддерживают внутренние органы,
+          помогают держать осанку и влияют на яркость ощущений.
+        </p>
+        <p>
+          На занятиях вы учитесь находить эти мышцы, укреплять их и — что не менее важно — расслаблять.
+        </p>
+      </div>
+
+      <h3 class="for-title">Кому подойдёт</h3>
+      <ul class="for-list">
+        <li>Хотите укрепить интимные мышцы и лучше чувствовать тело</li>
+        <li>Восстанавливаетесь после родов (с разрешения врача)</li>
+        <li>Много сидите и хотите улучшить осанку</li>
+        <li>Хотите больше уверенности в себе и в близости</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2. Профиты -->
+  <section class="benefits" id="polza">
+    <div class="wrap">
+      <h2 class="section-title">Что даёт тренировка</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">💪</div>
+          <h3>Сильное тазовое дно</h3>
+          <p>Мышцы становятся крепче и выносливее и лучше поддерживают органы малого таза.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">✨</div>
+          <h3>Больше чувствительности</h3>
+          <p>Тренированные мышцы и хорошее кровообращение делают ощущения ярче.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🌸</div>
+          <h3>Мягкое восстановление</h3>
+          <p>Бережная практика после родов — когда врач разрешил нагрузку.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🧘‍♀️</div>
+          <h3>Осанка и тонус</h3>
+          <p>Глубокие мышцы корпуса работают вместе с тазовым дном — спина и живот в тонусе.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🤍</div>
+          <h3>Контакт с телом</h3>
+          <p>Учитесь чувствовать напряжение и отпускать зажимы, которые мешают расслабиться.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🌙</div>
+          <h3>Уверенность</h3>
+          <p>Спокойная атмосфера среди женщин — без стеснения и сравнений.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Что внутри занятия -->
+  <section class="inside" id="vnutri">
+    <div class="wrap">
+      <h2 class="section-title">Что будет на занятии</h2>
+      <p class="section-lead">Каждая тренировка строится по понятной схеме — от настройки к практике и расслаблению.</p>
+      <ol class="steps">
+        <li>
+          <h3>Настройка и дыхание</h3>
+          <p>Мягкая разминка и дыхательные техники, чтобы включиться в тело.</p>
+        </li>
+        <li>
+          <h3>Знакомство с мышцами</h3>
+          <p>Учимся находить нужные мышцы и отличать напряжение от расслабления.</p>
+        </li>
+        <li>
+          <h3>Основная практика</h3>
+          <p>Упражнения на силу, выносливость и контроль тазового дна вместе с корпусом.</p>
+        </li>
+        <li>
+          <h3>Расслабление</h3>
+          <p>Растяжка и восстановление — уходите с лёгкостью в теле.</p>
+        </li>
+      </ol>
+      <p class="note">
+        Тренировки не заменяют лечение. Если вы беременны, недавно родили или у вас есть
+        заболевания органов малого таза, перед занятиями посоветуйтесь с врачом.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Три кнопки-заявки: каждая ведёт в Telegram -->
+  <section id="zapis">
+    <div class="wrap">
+      <h2 class="section-title">Записаться</h2>
+      <p class="section-lead">Выберите формат — откроется наш Telegram. Там расскажем о стоимости и подберём время.</p>
+      <div class="formats">
+        <article class="format">
+          <span class="format-tag">Разовое посещение</span>
+          <h3>Пробное занятие</h3>
+          <p>Одно занятие, чтобы познакомиться с практикой и тренером.</p>
+          <a class="btn btn-outline btn-block" href="https://t.me/+gFJLybr_aoUxNDgy" data-telegram="trial" target="_blank" rel="noopener">
+            <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
+            Записаться на пробное
+          </a>
+        </article>
+        <article class="format format-accent">
+          <span class="format-tag">Регулярно</span>
+          <h3>Абонемент</h3>
+          <p>Серия занятий — чтобы результат появился и закрепился.</p>
+          <a class="btn btn-light btn-block" href="https://t.me/+rNOw2_p40Qg4ZGUy" data-telegram="subscription" target="_blank" rel="noopener">
+            <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
+            Купить абонемент
+          </a>
+        </article>
+        <article class="format">
+          <span class="format-tag">По запросу</span>
+          <h3>Онлайн</h3>
+          <p>Занятия онлайн, если нет возможности прийти в студию.</p>
+          <a class="btn btn-outline btn-block" href="https://t.me/+VnHaXxfGr2oxNjY6" data-telegram="online" target="_blank" rel="noopener">
+            <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
+            Запросить онлайн
+          </a>
+        </article>
+      </div>
+      <p class="formats-hint">Заявка ни к чему не обязывает</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span class="logo">EROTRAVERSE</span>
+    <span>Женский интимный фитнес · офлайн-тренировки</span>
+    <a href="https://t.me/+a82C_hZYJG5iNzcy" data-telegram="main" target="_blank" rel="noopener">Наш Telegram</a>
+  </div>
+</footer>
+
+<script>
+  // Ссылки на Telegram — у каждой кнопки своя.
+  // Именные пригласительные ссылки показывают в Telegram, кто по какой кнопке пришёл.
+  var TELEGRAM_LINKS = {
+    main: "https://t.me/+a82C_hZYJG5iNzcy",          // канал («Наш Telegram» внизу)
+    trial: "https://t.me/+gFJLybr_aoUxNDgy",         // «Пробное занятие»
+    subscription: "https://t.me/+rNOw2_p40Qg4ZGUy",  // «Абонемент»
+    online: "https://t.me/+VnHaXxfGr2oxNjY6"         // «Онлайн по запросу»
+  };
+
+  document.querySelectorAll("[data-telegram]").forEach(function (link) {
+    link.href = TELEGRAM_LINKS[link.getAttribute("data-telegram")] || TELEGRAM_LINKS.main;
+  });
+</script>
+</body>
+</html>
