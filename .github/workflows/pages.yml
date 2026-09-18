@@ -1,0 +1,76 @@
+name: Публикация сайта
+
+# Ветка main — основной сайт: https://erotraverse.github.io
+# Ветка test — тестовая копия:  https://erotraverse.github.io/test/
+on:
+  push:
+    branches: [main, test]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Основная версия (main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - name: Тестовая версия (test)
+        uses: actions/checkout@v4
+        with:
+          ref: test
+          path: test
+
+      - name: Проверка страниц
+        run: |
+          check() {
+            f="$1/index.html"
+            echo "Проверяю $f"
+            grep -q '<title>' "$f"                              || { echo "нет заголовка страницы"; exit 1; }
+            grep -q 'class="hero-offer"' "$f"                   || { echo "нет оффера"; exit 1; }
+            grep -q 'id="polza"' "$f"                           || { echo "нет блока пользы"; exit 1; }
+            for key in trial subscription online; do
+              grep -q "data-telegram=\"$key\"" "$f"             || { echo "нет кнопки $key"; exit 1; }
+            done
+            grep -q 'erotraverse_request_bot?start=' "$f"       || { echo "кнопки не ведут в бота"; exit 1; }
+            ! grep -q 't\.me/\.\.\.' "$f"                        || { echo "осталась заглушка t.me/..."; exit 1; }
+            echo "  всё на месте"
+          }
+          check main
+          check test
+
+      - name: Сборка
+        run: |
+          mkdir -p _site/test
+          rsync -a --exclude '.git*' --exclude '.github' --exclude 'README.md' main/ _site/
+          rsync -a --exclude '.git*' --exclude '.github' --exclude 'README.md' test/ _site/test/
+          # Тестовую копию не показываем поисковикам и помечаем плашкой
+          sed -i 's|<meta charset="utf-8">|<meta charset="utf-8">\n<meta name="robots" content="noindex, nofollow">|' _site/test/index.html
+          sed -i 's|<body>|<body>\n<div style="position:fixed;left:12px;bottom:12px;z-index:99;padding:6px 12px;border-radius:999px;background:#c0392b;color:#fff;font:600 13px/1.2 system-ui,sans-serif">ТЕСТОВАЯ ВЕРСИЯ</div>|' _site/test/index.html
+          printf 'User-agent: *\nDisallow: /test/\n' > _site/robots.txt
+          ls -R _site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
