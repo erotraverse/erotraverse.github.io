@@ -226,6 +226,7 @@
   .format-accent p { color: rgba(253, 248, 245, .82); }
   .format-accent .format-tag { color: var(--rose-light); }
   .formats-hint { margin-top: 18px; font-size: 15px; color: var(--muted); text-align: center; }
+  .formats-hint a { color: var(--plum); font-weight: 600; white-space: nowrap; }
 
   /* Узкие телефоны: текст кнопок в карточках — в одну строку */
   @media (max-width: 400px) {
@@ -280,7 +281,7 @@
         и поймите, подходит ли вам формат, — без долгих обязательств.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-light" href="https://t.me/+gFJLybr_aoUxNDgy" data-telegram="trial" target="_blank" rel="noopener">Записаться на одно занятие</a>
+        <a class="btn btn-light" href="https://t.me/erotraverse_request_bot?start=trial" data-telegram="trial" target="_blank" rel="noopener">Записаться на одно занятие</a>
         <a class="btn btn-ghost" href="#zapis">Все форматы</a>
       </div>
       <ul class="hero-facts">
@@ -389,13 +390,13 @@
   <section id="zapis">
     <div class="wrap">
       <h2 class="section-title">Записаться</h2>
-      <p class="section-lead">Выберите формат — откроется наш Telegram. Там расскажем о стоимости и подберём время.</p>
+      <p class="section-lead">Выберите формат — откроется наш Telegram-бот. В нём можно записаться, узнать цены и задать вопрос.</p>
       <div class="formats">
         <article class="format">
           <span class="format-tag">Разовое посещение</span>
           <h3>Одно занятие</h3>
           <p>Чтобы познакомиться с практикой и тренером.</p>
-          <a class="btn btn-outline btn-block" href="https://t.me/+gFJLybr_aoUxNDgy" data-telegram="trial" target="_blank" rel="noopener">
+          <a class="btn btn-outline btn-block" href="https://t.me/erotraverse_request_bot?start=trial" data-telegram="trial" target="_blank" rel="noopener">
             <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
             Записаться на одно занятие
           </a>
@@ -404,7 +405,7 @@
           <span class="format-tag">Регулярно</span>
           <h3>Абонемент</h3>
           <p>Серия занятий — чтобы результат появился и закрепился.</p>
-          <a class="btn btn-light btn-block" href="https://t.me/+rNOw2_p40Qg4ZGUy" data-telegram="subscription" target="_blank" rel="noopener">
+          <a class="btn btn-light btn-block" href="https://t.me/erotraverse_request_bot?start=pass" data-telegram="subscription" target="_blank" rel="noopener">
             <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
             Купить абонемент
           </a>
@@ -413,13 +414,13 @@
           <span class="format-tag">По запросу</span>
           <h3>Онлайн</h3>
           <p>Занятия онлайн, если нет возможности прийти в студию.</p>
-          <a class="btn btn-outline btn-block" href="https://t.me/+VnHaXxfGr2oxNjY6" data-telegram="online" target="_blank" rel="noopener">
+          <a class="btn btn-outline btn-block" href="https://t.me/erotraverse_request_bot?start=online" data-telegram="online" target="_blank" rel="noopener">
             <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
             Запросить онлайн
           </a>
         </article>
       </div>
-      <p class="formats-hint">Заявка ни к чему не обязывает</p>
+      <p class="formats-hint">Заявка ни к чему не обязывает · <a href="https://t.me/erotraverse_request_bot?start=faq" data-telegram="faq" target="_blank" rel="noopener">Цены и частые вопросы</a></p>
     </div>
   </section>
 
@@ -438,9 +439,11 @@
   // Именные пригласительные ссылки показывают в Telegram, кто по какой кнопке пришёл.
   var TELEGRAM_LINKS = {
     main: "https://t.me/+a82C_hZYJG5iNzcy",          // канал («Наш Telegram» внизу)
-    trial: "https://t.me/+gFJLybr_aoUxNDgy",         // «Одно занятие»
-    subscription: "https://t.me/+rNOw2_p40Qg4ZGUy",  // «Абонемент»
-    online: "https://t.me/+VnHaXxfGr2oxNjY6"         // «Онлайн по запросу»
+    // Кнопки записи ведут в бота; метка после ?start= сообщает боту, какой формат выбран
+    trial: "https://t.me/erotraverse_request_bot?start=trial",         // «Одно занятие»
+    subscription: "https://t.me/erotraverse_request_bot?start=pass",   // «Абонемент»
+    online: "https://t.me/erotraverse_request_bot?start=online",       // «Онлайн по запросу»
+    faq: "https://t.me/erotraverse_request_bot?start=faq"              // «Цены и частые вопросы»
   };
 
   document.querySelectorAll("[data-telegram]").forEach(function (link) {
