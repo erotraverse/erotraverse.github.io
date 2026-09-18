@@ -234,6 +234,66 @@
     .format .tg-icon { width: 18px; height: 18px; }
   }
 
+  /* ---------- Форма заявки (сохраняется в базу на Railway) ---------- */
+  .apply { background: linear-gradient(180deg, var(--cream) 0%, var(--blush) 100%); }
+  .form-card {
+    margin-top: 30px;
+    max-width: 560px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    padding: 26px 20px;
+    box-shadow: 0 20px 50px -30px rgba(58, 24, 48, .35);
+  }
+  .field + .field { margin-top: 18px; }
+  .field label, .field legend { display: block; font-weight: 600; margin-bottom: 8px; padding: 0; }
+  .field input[type="text"] {
+    width: 100%;
+    min-height: 54px;
+    padding: 0 16px;
+    font: inherit;
+    font-size: 17px; /* не меньше 16px — иначе iPhone приближает поле */
+    color: var(--ink);
+    background: var(--cream);
+    border: 1.5px solid var(--line);
+    border-radius: 14px;
+    outline: none;
+  }
+  .field input[type="text"]:focus { border-color: var(--rose); box-shadow: 0 0 0 4px rgba(201, 116, 143, .18); }
+  fieldset.field { border: 0; margin: 18px 0 0; padding: 0; min-width: 0; }
+  .pills { display: grid; gap: 8px; }
+  .pill { position: relative; }
+  .pill input { position: absolute; opacity: 0; pointer-events: none; }
+  .pill span {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 0 16px;
+    border: 1.5px solid var(--line);
+    border-radius: 14px;
+    background: var(--cream);
+    cursor: pointer;
+  }
+  .pill span::before {
+    content: "";
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--line);
+    background: var(--white);
+  }
+  .pill input:checked + span { border-color: var(--plum); background: var(--blush); }
+  .pill input:checked + span::before { border-color: var(--plum); box-shadow: inset 0 0 0 4px var(--white); background: var(--plum); }
+  .pill input:focus-visible + span { box-shadow: 0 0 0 4px rgba(201, 116, 143, .25); }
+  .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  .form-card .btn { margin-top: 24px; }
+  .form-card .btn:disabled { opacity: .6; cursor: wait; }
+  .form-status { margin-top: 16px; padding: 14px 16px; border-radius: 14px; font-size: 15px; }
+  .form-status.ok { background: #eef6ef; color: #2f5a36; }
+  .form-status.error { background: #fbeaea; color: #8a2b2b; }
+
   /* ---------- Подвал ---------- */
   .footer { background: var(--plum-deep); color: rgba(253, 248, 245, .8); padding-block: 36px; font-size: 15px; }
   .footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 30px; align-items: center; justify-content: space-between; }
@@ -424,6 +484,35 @@
     </div>
   </section>
 
+  <!-- Форма заявки: отправляется в приёмник на Railway и сохраняется в базу Postgres -->
+  <section class="apply" id="forma">
+    <div class="wrap">
+      <h2 class="section-title">Или оставьте заявку здесь</h2>
+      <p class="section-lead">Напишите имя и контакт — мы сами свяжемся с вами и подберём время.</p>
+      <form class="form-card" id="lead-form" novalidate>
+        <div class="field">
+          <label for="lead-name">Имя</label>
+          <input type="text" id="lead-name" name="name" autocomplete="given-name" placeholder="Как к вам обращаться" maxlength="100" required>
+        </div>
+        <div class="field">
+          <label for="lead-contact">Контакт</label>
+          <input type="text" id="lead-contact" name="contact" autocomplete="tel" placeholder="Телефон или @ник в Telegram" maxlength="100" required>
+        </div>
+        <fieldset class="field">
+          <legend>Формат</legend>
+          <div class="pills">
+            <label class="pill"><input type="radio" name="format" value="trial" checked><span>Одно занятие</span></label>
+            <label class="pill"><input type="radio" name="format" value="pass"><span>Абонемент</span></label>
+            <label class="pill"><input type="radio" name="format" value="online"><span>Онлайн по запросу</span></label>
+          </div>
+        </fieldset>
+        <div class="hp" aria-hidden="true"><label>Сайт <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn btn-primary btn-block" type="submit">Отправить заявку</button>
+        <p class="form-status" id="lead-status" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
@@ -448,6 +537,57 @@
 
   document.querySelectorAll("[data-telegram]").forEach(function (link) {
     link.href = TELEGRAM_LINKS[link.getAttribute("data-telegram")] || TELEGRAM_LINKS.main;
+  });
+
+  // Форма заявки: отправляется в приёмник на Railway и сохраняется в базу
+  var LEADS_API = "https://api-production-005a.up.railway.app/api/leads";
+  var form = document.getElementById("lead-form");
+  var statusBox = document.getElementById("lead-status");
+
+  function showStatus(text, ok) {
+    statusBox.hidden = false;
+    statusBox.textContent = text;
+    statusBox.className = "form-status " + (ok ? "ok" : "error");
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var nameInput = form.elements.namedItem("name");
+    var contactInput = form.elements.namedItem("contact");
+    var name = nameInput.value.trim();
+    var contact = contactInput.value.trim();
+    if (!name) { showStatus("Напишите, как к вам обращаться", false); nameInput.focus(); return; }
+    if (contact.length < 5) { showStatus("Оставьте телефон или @ник в Telegram", false); contactInput.focus(); return; }
+
+    var button = form.querySelector('button[type="submit"]');
+    button.disabled = true;
+    button.textContent = "Отправляем…";
+    fetch(LEADS_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        contact: contact,
+        format: form.elements.namedItem("format").value,
+        website: form.elements.namedItem("website").value
+      })
+    }).then(function (response) {
+      return response.json().catch(function () { return {}; }).then(function (body) {
+        return { ok: response.ok && body.ok, body: body };
+      });
+    }).then(function (result) {
+      if (result.ok) {
+        form.reset();
+        showStatus("Спасибо! Заявка отправлена — мы свяжемся с вами и подберём время.", true);
+      } else {
+        showStatus(result.body.error || "Не получилось отправить. Попробуйте ещё раз или напишите нам в Telegram.", false);
+      }
+    }).catch(function () {
+      showStatus("Нет связи. Попробуйте ещё раз или напишите нам в Telegram.", false);
+    }).then(function () {
+      button.disabled = false;
+      button.textContent = "Отправить заявку";
+    });
   });
 </script>
 </body>
