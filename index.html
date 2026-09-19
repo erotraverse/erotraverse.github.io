@@ -140,6 +140,15 @@
   .section-title { font-size: clamp(2.1rem, 6.5vw, 3.1rem); color: var(--plum-deep); }
   .section-lead { margin-top: 14px; color: var(--muted); max-width: 42rem; font-size: 18px; }
   .section-lead p + p { margin-top: 12px; }
+  /* Выделенные слова в тексте: изящный курсив в тон заголовку главного экрана */
+  .accent-words {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.4em;
+    line-height: 1;
+    color: #a8506e;
+  }
 
   /* ---------- 2. Описание и профиты ---------- */
   .for-title { margin-top: 36px; font-size: 1.7rem; color: var(--plum-deep); }
@@ -441,7 +450,7 @@
     <div class="wrap">
       <h2 class="section-title">Для жизни, а не для коврика</h2>
       <p class="section-lead">
-        Интимные мышцы нужны нам не лёжа на коврике, а в жизни: когда мы двигаемся, танцуем, любим.
+        Интимные мышцы нужны нам не лёжа на коврике, а в жизни: когда мы <em class="accent-words">двигаемся, танцуем, любим</em>.
         Поэтому на EROTRAVERSE они тренируются именно так — в движении и под музыку.
       </p>
       <div class="cards">
