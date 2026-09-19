@@ -3,8 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EROTRAVERSE — тренировки тазового дна для женщин</title>
-<meta name="description" content="EROTRAVERSE — женский интимный фитнес. Офлайн-тренировки мышц тазового дна: сила, здоровье и чувственность. Одно занятие, абонемент или онлайн по запросу.">
+<title>EROTRAVERSE — интимный фитнес для женщин в Праге</title>
+<meta name="description" content="EROTRAVERSE — женский интимный фитнес в Праге. Тренировки мышц тазового дна в движении и под музыку: сила, здоровье, пластика и чувственность. Одно занятие, абонемент или онлайн.">
+<!-- Превью ссылки в Telegram, WhatsApp и соцсетях -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="EROTRAVERSE">
+<meta property="og:title" content="EROTRAVERSE — интимный фитнес для женщин в Праге">
+<meta property="og:description" content="Тренировки мышц тазового дна в движении и под музыку. Начните с одного занятия.">
+<meta property="og:url" content="https://erotraverse.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -198,6 +205,44 @@
   .steps h3 { font-size: 1.5rem; color: var(--plum-deep); }
   .steps p { margin-top: 4px; color: var(--muted); }
 
+  /* ---------- С чего начать: что взять с собой, противопоказания ---------- */
+  #start .steps li { background: var(--white); border: 1px solid var(--line); }
+  .info-grid { display: grid; gap: 14px; margin-top: 30px; align-items: start; }
+  .info-box { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 22px; }
+  .info-box h3 { font-size: 1.6rem; color: var(--plum-deep); }
+  .info-box > p { margin-top: 10px; color: var(--muted); }
+  .info-box ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
+  .info-box li + li { margin-top: 6px; }
+  .info-box li::marker { color: var(--rose); }
+  .info-box .info-foot { margin-top: 14px; font-size: 15px; }
+  .contra { border-left: 4px solid var(--rose); }
+
+  /* Раскрывающиеся блоки: противопоказания и частые вопросы */
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  details > summary::after {
+    content: "+";
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--blush);
+    color: var(--plum);
+    font-size: 22px;
+    line-height: 1;
+    transition: transform .2s ease;
+  }
+  details[open] > summary::after { transform: rotate(45deg); }
+  details > summary:focus-visible { outline: 3px solid var(--rose); outline-offset: 4px; border-radius: 8px; }
+
+  .faq { display: grid; gap: 10px; margin-top: 30px; max-width: 760px; }
+  .faq details { background: var(--cream); border-radius: 18px; padding: 18px 20px; }
+  .faq summary { font-weight: 600; font-size: 17px; color: var(--plum-deep); }
+  .faq details p { margin-top: 10px; color: var(--muted); }
+
   .note {
     margin-top: 26px;
     padding: 16px 18px;
@@ -225,6 +270,10 @@
   .format-accent h3 { color: var(--cream); }
   .format-accent p { color: rgba(253, 248, 245, .82); }
   .format-accent .format-tag { color: var(--rose-light); }
+  .format p.format-price { margin: 10px 0 0; flex: none; font-size: 1.35rem; font-weight: 700; color: var(--plum-deep); line-height: 1.3; }
+  .format-price span { display: block; font-size: 14px; font-weight: 500; color: var(--muted); }
+  .format-accent p.format-price { color: var(--cream); }
+  .format-accent .format-price span { color: rgba(253, 248, 245, .75); }
   .formats-hint { margin-top: 18px; font-size: 15px; color: var(--muted); text-align: center; }
   .formats-hint a { color: var(--plum); font-weight: 600; white-space: nowrap; }
 
@@ -301,18 +350,18 @@
 
   /* ---------- Планшет и компьютер ---------- */
   @media (min-width: 640px) {
-    .cards, .for-list, .steps { grid-template-columns: repeat(2, 1fr); }
+    .cards, .for-list, .steps, .info-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (min-width: 960px) {
     section { padding-block: 96px; }
     .hero { padding-block: 104px 112px; }
     .benefits { padding-top: 0; }
     .hero-actions .btn { flex: 0 0 auto; }
-    .cards, .formats { grid-template-columns: repeat(3, 1fr); }
+    .cards, .formats, #start .steps { grid-template-columns: repeat(3, 1fr); }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .btn { transition: none; }
+    .btn, details > summary::after { transition: none; }
   }
 </style>
 </head>
@@ -330,11 +379,12 @@
   <!-- 1. Главный экран: название, для кого, оффер -->
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Офлайн-тренировки для женщин</span>
+      <span class="eyebrow">Тренировки для женщин в Праге · 18+</span>
       <h1>EROTRAVERSE — <em>интимный фитнес</em> для силы и чувственности</h1>
       <p class="hero-for">
-        Для женщин, которые хотят укрепить мышцы тазового дна, лучше чувствовать своё тело
-        и позаботиться о женском здоровье — в любом возрасте.
+        Фитнес, в котором вместе со всем телом работают интимные мышцы. Для женщин,
+        которые хотят укрепить тазовое дно, лучше чувствовать своё тело и увереннее двигаться —
+        в том числе в близости.
       </p>
       <p class="hero-offer">
         <strong>Начните с одного занятия:</strong> познакомьтесь с практикой и тренером
@@ -345,9 +395,9 @@
         <a class="btn btn-ghost" href="#zapis">Все форматы</a>
       </div>
       <ul class="hero-facts">
-        <li>Занятия в студии</li>
+        <li>Авторская методика с 2011 года</li>
+        <li>Занятия в студии и онлайн</li>
         <li>Спокойная женская атмосфера</li>
-        <li>Бережный подход</li>
       </ul>
     </div>
   </section>
@@ -358,12 +408,13 @@
       <h2 class="section-title">Что такое EROTRAVERSE</h2>
       <div class="section-lead">
         <p>
-          Это тренировка мышц тазового дна вместе с дыханием и глубокими мышцами корпуса.
-          Этих мышц не видно в зеркале, но именно они поддерживают внутренние органы,
+          Это фитнес-тренировка под музыку, в которой вместе со всем телом работают мышцы тазового дна.
+          Их не видно в зеркале, но именно они поддерживают внутренние органы,
           помогают держать осанку и влияют на яркость ощущений.
         </p>
         <p>
-          На занятиях вы учитесь находить эти мышцы, укреплять их и — что не менее важно — расслаблять.
+          Сначала вы учитесь находить эти мышцы, правильно сокращать и — что не менее важно — расслаблять.
+          Потом включать их в движении, в разных положениях тела, пока это не станет привычкой.
         </p>
       </div>
 
@@ -372,8 +423,53 @@
         <li>Хотите укрепить интимные мышцы и лучше чувствовать тело</li>
         <li>Восстанавливаетесь после родов (с разрешения врача)</li>
         <li>Много сидите и хотите улучшить осанку</li>
-        <li>Хотите больше уверенности в себе и в близости</li>
+        <li>Хотите больше уверенности и разнообразия в близости</li>
+        <li>Пробовали упражнения Кегеля, но не понимаете, правильно ли их делаете</li>
+        <li>Ищете фитнес, который нравится не только телу, но и настроению</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Чем EROTRAVERSE отличается от обычных упражнений для тазового дна -->
+  <section class="benefits" id="otlichie">
+    <div class="wrap">
+      <h2 class="section-title">Чем EROTRAVERSE отличается</h2>
+      <p class="section-lead">
+        Упражнения для интимных мышц обычно делают лёжа и по счёту. EROTRAVERSE идёт дальше:
+        мышцы учатся работать в движении — так, как это нужно в жизни.
+      </p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🎵</div>
+          <h3>Мышцы в движении</h3>
+          <p>Интимные мышцы работают в разных положениях тела и в ритме музыки, а не только лёжа на коврике.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🔁</div>
+          <h3>Навык, а не упражнение</h3>
+          <p>Цель — чтобы правильное сокращение стало привычкой тела и включалось само, без мысленного счёта.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📳</div>
+          <h3>Видно, что получается</h3>
+          <p>Можно заниматься с тренажёром с обратной связью: его вибрация подсказывает, работают ли мышцы.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🔥</div>
+          <h3>Полноценный фитнес</h3>
+          <p>Кардио, сила, пластика и растяжка в одной тренировке — работает всё тело, а не одна зона.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">🪜</div>
+          <h3>Постепенно и безопасно</h3>
+          <p>Сначала правильное сокращение, потом движение, и только потом скорость. Никто не торопит.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">📖</div>
+          <h3>Авторская методика</h3>
+          <p>EROTRAVERSE создала Татьяна Бисэри в 2011 году. Тренер прошла обучение у автора методики.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -399,8 +495,8 @@
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">🧘‍♀️</div>
-          <h3>Осанка и тонус</h3>
-          <p>Глубокие мышцы корпуса работают вместе с тазовым дном — спина и живот в тонусе.</p>
+          <h3>Тонус всего тела</h3>
+          <p>Работа с собственным весом, кардио и растяжка: спина, живот и ягодицы в тонусе, осанка ровнее.</p>
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">🤍</div>
@@ -409,8 +505,8 @@
         </article>
         <article class="card">
           <div class="card-icon" aria-hidden="true">🌙</div>
-          <h3>Уверенность</h3>
-          <p>Спокойная атмосфера среди женщин — без стеснения и сравнений.</p>
+          <h3>Пластика и уверенность</h3>
+          <p>Движения становятся свободнее и красивее — это чувствуется и в теле, и в близости.</p>
         </article>
       </div>
     </div>
@@ -420,29 +516,115 @@
   <section class="inside" id="vnutri">
     <div class="wrap">
       <h2 class="section-title">Что будет на занятии</h2>
-      <p class="section-lead">Каждая тренировка строится по понятной схеме — от настройки к практике и расслаблению.</p>
+      <p class="section-lead">Каждая тренировка строится по понятной схеме — от разминки к практике и расслаблению.</p>
       <ol class="steps">
         <li>
-          <h3>Настройка и дыхание</h3>
-          <p>Мягкая разминка и дыхательные техники, чтобы включиться в тело.</p>
+          <h3>Разминка</h3>
+          <p>Суставы, подвижность таза и спины, лёгкое растягивание — тело разогревается и включается.</p>
         </li>
         <li>
-          <h3>Знакомство с мышцами</h3>
-          <p>Учимся находить нужные мышцы и отличать напряжение от расслабления.</p>
+          <h3>Настройка на мышцы</h3>
+          <p>Находим интимные мышцы и вспоминаем главное: сокращать мягко внутрь и вверх, не задерживая дыхание и не напрягая живот.</p>
         </li>
         <li>
           <h3>Основная практика</h3>
-          <p>Упражнения на силу, выносливость и контроль тазового дна вместе с корпусом.</p>
+          <p>Движения в разных положениях тела под музыку. Темп растёт постепенно — ровно настолько, насколько получается сохранять технику.</p>
+        </li>
+        <li>
+          <h3>Растяжка</h3>
+          <p>Спокойная растяжка без боли и рывков: снимаем напряжение, мягко улучшаем гибкость.</p>
         </li>
         <li>
           <h3>Расслабление</h3>
-          <p>Растяжка и восстановление — уходите с лёгкостью в теле.</p>
+          <p>Медленная осознанная практика: чувствуем мышцы и отпускаем напряжение — уходите с лёгкостью в теле.</p>
         </li>
       </ol>
-      <p class="note">
-        Тренировки не заменяют лечение. Если вы беременны, недавно родили или у вас есть
-        заболевания органов малого таза, перед занятиями посоветуйтесь с врачом.
-      </p>
+    </div>
+  </section>
+
+  <!-- С чего начать: путь новой ученицы -->
+  <section id="start">
+    <div class="wrap">
+      <h2 class="section-title">С чего начать</h2>
+      <p class="section-lead">Результат даёт регулярность. Поэтому мы идём постепенно — от знакомства к привычке.</p>
+      <ol class="steps">
+        <li>
+          <h3>Одно занятие</h3>
+          <p>Знакомитесь с практикой и тренером, понимаете, откликается ли вам формат.</p>
+        </li>
+        <li>
+          <h3>Базовый навык</h3>
+          <p>Учитесь правильно сокращать и расслаблять мышцы. Помогут короткие домашние упражнения — 10–15 минут в день.</p>
+        </li>
+        <li>
+          <h3>Регулярные тренировки</h3>
+          <p>Абонемент — 2 занятия в неделю. Через несколько недель тело начинает делать всё само.</p>
+        </li>
+      </ol>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>Что взять с собой</h3>
+          <ul>
+            <li>Лосины и топ из тонкой эластичной ткани — не утягивающие ягодицы и бёдра</li>
+            <li>Бутылку воды</li>
+            <li>Резинку для волос</li>
+            <li>Тренажёр, если он у вас есть. Если нет — подскажем, какой выбрать</li>
+          </ul>
+          <p class="info-foot">Занимаемся босиком. Коврики есть в студии.</p>
+        </div>
+        <details class="info-box contra">
+          <summary><h3>Противопоказания</h3></summary>
+          <p>Если врач разрешает вам секс и спорт — заниматься можно. Отложите тренировки, если у вас:</p>
+          <ul>
+            <li>беременность;</li>
+            <li>острое воспаление мочеполовой системы, обострение хронического заболевания или инфекция;</li>
+            <li>меньше 6–8 недель после операции;</li>
+            <li>онкологическое заболевание;</li>
+            <li>гипертония, астма или болезни сердца;</li>
+            <li>острая травма или обострение болезни позвоночника, коленей, суставов.</li>
+          </ul>
+          <p class="info-foot">После родов — с разрешения врача. Тренировки не заменяют лечение: если сомневаетесь, сначала посоветуйтесь с врачом.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Частые вопросы -->
+  <section class="inside" id="voprosy">
+    <div class="wrap">
+      <h2 class="section-title">Частые вопросы</h2>
+      <div class="faq">
+        <details>
+          <summary>Это эротический танец?</summary>
+          <p>Нет. Это фитнес: работа с собственным весом, кардио, растяжка и тренировка интимных мышц.
+          В нём есть пластика и красивые движения, но главное — мышцы и то, как они работают. Занимаемся в спортивной одежде, в женской группе.</p>
+        </details>
+        <details>
+          <summary>Нужна ли подготовка или растяжка?</summary>
+          <p>Нет. Всё осваиваем постепенно: сначала правильное сокращение мышц, потом движение, и только потом скорость.
+          Если что-то пока не получается, делаете в своём темпе.</p>
+        </details>
+        <details>
+          <summary>Нужен ли тренажёр?</summary>
+          <p>На первое занятие — нет. Для регулярных тренировок удобно заниматься с вагинальным тренажёром с обратной связью:
+          его вибрация показывает, работают ли мышцы. Расскажем, какой выбрать.</p>
+        </details>
+        <details>
+          <summary>Чем это лучше упражнений Кегеля?</summary>
+          <p>Упражнения Кегеля — хорошее начало, и базовый навык мы тоже отрабатываем. Но в жизни мышцы нужны не лёжа,
+          а в движении. На EROTRAVERSE они учатся включаться в разных положениях тела, пока это не станет привычкой.</p>
+        </details>
+        <details>
+          <summary>Можно ли после родов?</summary>
+          <p>Да, когда врач разрешил физическую нагрузку. Начнём бережно — с базового навыка.</p>
+        </details>
+        <details>
+          <summary>Когда будет результат?</summary>
+          <p>Это зависит от регулярности. Короткие домашние упражнения каждый день и две тренировки в неделю —
+          и через несколько недель вы почувствуете разницу. Чтобы навык закрепился, обычно нужно от 1 до 3 месяцев.</p>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -455,6 +637,7 @@
         <article class="format">
           <span class="format-tag">Разовое посещение</span>
           <h3>Одно занятие</h3>
+          <p class="format-price">2 000 CZK</p>
           <p>Чтобы познакомиться с практикой и тренером.</p>
           <a class="btn btn-outline btn-block" href="https://t.me/erotraverse_request_bot?start=trial" data-telegram="trial" target="_blank" rel="noopener">
             <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
@@ -464,6 +647,7 @@
         <article class="format format-accent">
           <span class="format-tag">Регулярно</span>
           <h3>Абонемент</h3>
+          <p class="format-price">12 000 CZK <span>8 занятий за 30 дней · 1 500 CZK за занятие</span></p>
           <p>Серия занятий — чтобы результат появился и закрепился.</p>
           <a class="btn btn-light btn-block" href="https://t.me/erotraverse_request_bot?start=pass" data-telegram="subscription" target="_blank" rel="noopener">
             <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
@@ -473,6 +657,7 @@
         <article class="format">
           <span class="format-tag">По запросу</span>
           <h3>Онлайн</h3>
+          <p class="format-price">80 EUR <span>за занятие</span></p>
           <p>Занятия онлайн, если нет возможности прийти в студию.</p>
           <a class="btn btn-outline btn-block" href="https://t.me/erotraverse_request_bot?start=online" data-telegram="online" target="_blank" rel="noopener">
             <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
@@ -480,9 +665,10 @@
           </a>
         </article>
       </div>
-      <p class="formats-hint">Заявка ни к чему не обязывает · <a href="https://t.me/erotraverse_request_bot?start=faq" data-telegram="faq" target="_blank" rel="noopener">Цены и частые вопросы</a></p>
+      <p class="formats-hint">Заявка ни к чему не обязывает · <a href="https://t.me/erotraverse_request_bot?start=faq" data-telegram="faq" target="_blank" rel="noopener">Задать вопрос в Telegram</a></p>
     </div>
   </section>
+
 
   <!-- Форма заявки: отправляется в приёмник на Railway и сохраняется в базу Postgres -->
   <section class="apply" id="forma">
