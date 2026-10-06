@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>EROTRAVERSE — интимный фитнес для женщин</title>
-<meta name="description" content="EROTRAVERSE — женский интимный фитнес. Тренировки мышц тазового дна в движении и под музыку: сила, здоровье, пластика и чувственность. Одно занятие, абонемент или онлайн.">
+<meta name="description" content="EROTRAVERSE — женский интимный фитнес. Тренировки мышц тазового дна в движении и под музыку: сила, чувственность и уверенность. Начните с одного занятия.">
 <!-- Превью ссылки в Telegram, WhatsApp и соцсетях -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
@@ -14,788 +14,515 @@
 <meta property="og:url" content="https://erotraverse.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Oswald:wght@500;600;700&amp;family=Jost:wght@400;500&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
 <style>
-  :root {
-    --plum: #5b2a4a;
-    --plum-deep: #3a1830;
-    --rose: #c9748f;
-    --rose-light: #f3c3d1;
-    --blush: #f5e4e6;
-    --cream: #fdf8f5;
-    --white: #ffffff;
-    --ink: #2b1d26;
-    --muted: #6d5a65;
-    --line: #ecdcdf;
-    --radius: 22px;
-  }
-
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
-  body {
-    margin: 0;
-    font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
-    color: var(--ink);
-    background: var(--cream);
-    -webkit-font-smoothing: antialiased;
-  }
-  h1, h2, h3 {
-    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-    font-weight: 600;
-    line-height: 1.08;
-    margin: 0;
-  }
-  p { margin: 0; }
-  a { color: inherit; }
-
-  .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
-
-  /* ---------- Кнопки ---------- */
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    min-height: 54px;
-    padding: 0 28px;
-    border: 2px solid transparent;
-    border-radius: 999px;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform .15s ease, background-color .2s ease, color .2s ease;
-  }
-  .btn:active { transform: scale(.98); }
-  .btn:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
-  .btn-primary { background: var(--plum); color: var(--cream); }
-  .btn-primary:hover { background: var(--plum-deep); }
-  .btn-light { background: var(--cream); color: var(--plum-deep); }
-  .btn-light:hover { background: var(--blush); }
-  .btn-ghost { border-color: rgba(253, 248, 245, .55); color: var(--cream); background: transparent; }
-  .btn-ghost:hover { background: rgba(253, 248, 245, .1); }
-  .btn-outline { border-color: var(--plum); color: var(--plum); background: transparent; }
-  .btn-outline:hover { background: var(--plum); color: var(--cream); }
-  .btn-block { width: 100%; }
-  .tg-icon { width: 20px; height: 20px; flex: none; }
-
-  /* ---------- Шапка ---------- */
-  .top {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: rgba(253, 248, 245, .92);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 62px; }
-  .logo { font-weight: 700; letter-spacing: .18em; font-size: 15px; color: var(--plum-deep); text-decoration: none; }
-  .top .btn { min-height: 40px; padding: 0 18px; font-size: 14px; }
-
-  /* ---------- 1. Главный экран ---------- */
-  .hero {
-    color: var(--cream);
-    background:
-      radial-gradient(120% 80% at 100% 0%, rgba(201, 116, 143, .55) 0%, transparent 60%),
-      radial-gradient(90% 70% at 0% 100%, rgba(201, 116, 143, .25) 0%, transparent 60%),
-      linear-gradient(160deg, var(--plum) 0%, var(--plum-deep) 100%);
-  }
-  .eyebrow {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    padding: 7px 14px;
-    border: 1px solid rgba(253, 248, 245, .35);
-    border-radius: 999px;
-    margin-bottom: 22px;
-  }
-  .hero h1 { font-size: clamp(2.5rem, 9vw, 4.4rem); max-width: 15ch; }
-  .hero h1 em { font-style: italic; font-weight: 500; color: var(--rose-light); }
-  .hero-for { margin-top: 20px; font-size: 18px; max-width: 36rem; opacity: .92; }
-  .hero-offer {
-    margin-top: 22px;
-    max-width: 36rem;
-    padding: 16px 18px;
-    border-radius: 16px;
-    background: rgba(253, 248, 245, .1);
-    border: 1px solid rgba(253, 248, 245, .2);
-  }
-  .hero-offer strong { color: var(--rose-light); font-weight: 600; }
-  .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-  .hero-actions .btn { flex: 1 1 220px; }
-  .hero-facts { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 30px 0 0; padding: 0; list-style: none; font-size: 15px; opacity: .85; }
-  .hero-facts li::before { content: "✦"; margin-right: 8px; color: var(--rose-light); }
-
-  /* ---------- Секции ---------- */
-  section { padding-block: 64px; }
-  .hero { padding-block: 56px 64px; }
-  .section-title { font-size: clamp(2.1rem, 6.5vw, 3.1rem); color: var(--plum-deep); }
-  .section-lead { margin-top: 14px; color: var(--muted); max-width: 42rem; font-size: 18px; }
-  .section-lead p + p { margin-top: 12px; }
-  /* Выделенные слова в тексте: изящный курсив в тон заголовку главного экрана */
-  .accent-words {
-    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-    font-style: italic;
-    font-weight: 600;
-    font-size: 1.4em;
-    line-height: 1;
-    color: var(--plum);
-  }
-
-  /* ---------- 2. Описание и профиты ---------- */
-  .for-title { margin-top: 36px; font-size: 1.7rem; color: var(--plum-deep); }
-  .for-list { display: grid; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
-  .for-list li {
-    position: relative;
-    padding: 14px 16px 14px 48px;
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-  }
-  .for-list li::before {
-    content: "";
-    position: absolute;
-    left: 16px;
-    top: 19px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background: var(--blush);
-    box-shadow: inset 0 0 0 5px var(--rose);
-  }
-
-  .benefits { padding-top: 0; }
-  .cards { display: grid; gap: 14px; margin-top: 30px; }
-  .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 22px; }
-  .card-wide { grid-column: 1 / -1; }
-  .card-icon {
-    display: grid;
-    place-items: center;
-    width: 46px;
-    height: 46px;
-    border-radius: 14px;
-    background: var(--blush);
-    font-size: 22px;
-    margin-bottom: 14px;
-  }
-  .card h3 { font-size: 1.6rem; color: var(--plum-deep); }
-  .card p { margin-top: 8px; color: var(--muted); }
-
-  .inside { background: var(--blush); }
-  .steps { counter-reset: step; display: grid; gap: 14px; margin: 30px 0 0; padding: 0; list-style: none; }
-  .steps li {
-    counter-increment: step;
-    position: relative;
-    background: var(--cream);
-    border-radius: var(--radius);
-    padding: 22px 22px 22px 76px;
-  }
-  .steps li::before {
-    content: counter(step);
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    width: 40px;
-    height: 40px;
-    display: grid;
-    place-items: center;
-    border-radius: 50%;
-    background: var(--plum);
-    color: var(--cream);
-    font-weight: 700;
-  }
-  .steps h3 { font-size: 1.5rem; color: var(--plum-deep); }
-  .steps p { margin-top: 4px; color: var(--muted); }
-
-  /* Телефон: цифра над заголовком, текст на всю ширину карточки */
-  @media (max-width: 639px) {
-    .steps li { padding: 22px; }
-    .steps li::before { position: static; margin-bottom: 12px; }
-  }
-
-  /* ---------- С чего начать: что взять с собой, противопоказания ---------- */
-  #start .steps li { background: var(--white); border: 1px solid var(--line); }
-  .info-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-top: 30px; align-items: start; }
-  .info-box { min-width: 0; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 22px; }
-  .info-box h3 { font-size: 1.6rem; color: var(--plum-deep); }
-  /* Очень узкие телефоны: блоки не вылезают за край экрана */
-  @media (max-width: 359px) {
-    .info-box { padding: 20px 16px; }
-    .info-box h3 { font-size: 1.35rem; }
-  }
-  .info-box > p { margin-top: 10px; color: var(--muted); }
-  .info-box ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
-  .info-box li + li { margin-top: 6px; }
-  .info-box li::marker { color: var(--rose); }
-  .info-box .info-foot { margin-top: 14px; font-size: 15px; }
-  .contra { border-left: 4px solid var(--rose); }
-
-  /* Раскрывающиеся блоки: противопоказания и частые вопросы */
-  details > summary { list-style: none; cursor: pointer; }
-  details > summary::-webkit-details-marker { display: none; }
-  details > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  details > summary::after {
-    content: "+";
-    flex: none;
-    display: grid;
-    place-items: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: var(--blush);
-    color: var(--plum);
-    font-size: 22px;
-    line-height: 1;
-    transition: transform .2s ease;
-  }
-  details[open] > summary::after { transform: rotate(45deg); }
-  details > summary:focus-visible { outline: 3px solid var(--rose); outline-offset: 4px; border-radius: 8px; }
-
-  .faq { display: grid; gap: 10px; margin-top: 30px; max-width: 760px; }
-  .faq details { background: var(--cream); border-radius: 18px; padding: 18px 20px; }
-  .faq summary { font-weight: 600; font-size: 17px; color: var(--plum-deep); }
-  .faq details p { margin-top: 10px; color: var(--muted); }
-
-  .note {
-    margin-top: 26px;
-    padding: 16px 18px;
-    border-left: 4px solid var(--rose);
-    background: var(--cream);
-    border-radius: 12px;
-    font-size: 15px;
-    color: var(--muted);
-  }
-
-  /* ---------- 3. Три кнопки-заявки ---------- */
-  .formats { display: grid; gap: 14px; margin-top: 30px; }
-  .format {
-    display: flex;
-    flex-direction: column;
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 26px 22px;
-  }
-  .format-tag { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--rose); }
-  .format h3 { margin-top: 6px; font-size: 1.9rem; color: var(--plum-deep); }
-  .format p { margin: 8px 0 22px; color: var(--muted); flex: 1; }
-  .format-accent { background: var(--plum); border-color: var(--plum); color: var(--cream); }
-  .format-accent h3 { color: var(--cream); }
-  .format-accent p { color: rgba(253, 248, 245, .82); }
-  .format-accent .format-tag { color: var(--rose-light); }
-  .format p.format-price { margin: 10px 0 0; flex: none; font-size: 1.35rem; font-weight: 700; color: var(--plum-deep); line-height: 1.3; }
-  .format-price span { display: block; font-size: 14px; font-weight: 500; color: var(--muted); }
-  .format-accent p.format-price { color: var(--cream); }
-  .format-accent .format-price span { color: rgba(253, 248, 245, .75); }
-  .formats-hint { margin-top: 18px; font-size: 15px; color: var(--muted); text-align: center; }
-  .formats-hint a { color: var(--plum); font-weight: 600; white-space: nowrap; }
-
-  /* Узкие телефоны: текст кнопок в карточках — в одну строку */
-  @media (max-width: 400px) {
-    .format .btn { padding-inline: 14px; gap: 8px; font-size: 15px; }
-    .format .tg-icon { width: 18px; height: 18px; }
-  }
-
-  /* ---------- Форма заявки (сохраняется в базу на Railway) ---------- */
-  .apply { background: linear-gradient(180deg, var(--cream) 0%, var(--blush) 100%); }
-  .form-card {
-    margin-top: 30px;
-    max-width: 560px;
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 26px;
-    padding: 26px 20px;
-    box-shadow: 0 20px 50px -30px rgba(58, 24, 48, .35);
-  }
-  .field + .field { margin-top: 18px; }
-  .field label, .field legend { display: block; font-weight: 600; margin-bottom: 8px; padding: 0; }
-  .field input[type="text"] {
-    width: 100%;
-    min-height: 54px;
-    padding: 0 16px;
-    font: inherit;
-    font-size: 17px; /* не меньше 16px — иначе iPhone приближает поле */
-    color: var(--ink);
-    background: var(--cream);
-    border: 1.5px solid var(--line);
-    border-radius: 14px;
-    outline: none;
-  }
-  .field input[type="text"]:focus { border-color: var(--rose); box-shadow: 0 0 0 4px rgba(201, 116, 143, .18); }
-  fieldset.field { border: 0; margin: 18px 0 0; padding: 0; min-width: 0; }
-  .pills { display: grid; gap: 8px; }
-  .pill { position: relative; }
-  .pill input { position: absolute; opacity: 0; pointer-events: none; }
-  .pill span {
-    display: flex;
-    align-items: center;
-    min-height: 50px;
-    padding: 0 16px;
-    border: 1.5px solid var(--line);
-    border-radius: 14px;
-    background: var(--cream);
-    cursor: pointer;
-  }
-  .pill span::before {
-    content: "";
-    flex: none;
-    width: 18px;
-    height: 18px;
-    margin-right: 12px;
-    border-radius: 50%;
-    border: 2px solid var(--line);
-    background: var(--white);
-  }
-  .pill input:checked + span { border-color: var(--plum); background: var(--blush); }
-  .pill input:checked + span::before { border-color: var(--plum); box-shadow: inset 0 0 0 4px var(--white); background: var(--plum); }
-  .pill input:focus-visible + span { box-shadow: 0 0 0 4px rgba(201, 116, 143, .25); }
-  .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
-  .form-card .btn { margin-top: 24px; }
-  .form-card .btn:disabled { opacity: .6; cursor: wait; }
-  .form-status { margin-top: 16px; padding: 14px 16px; border-radius: 14px; font-size: 15px; }
-  .form-status.ok { background: #eef6ef; color: #2f5a36; }
-  .form-status.error { background: #fbeaea; color: #8a2b2b; }
-
-  /* ---------- Подвал ---------- */
-  .footer { background: var(--plum-deep); color: rgba(253, 248, 245, .8); padding-block: 36px; font-size: 15px; }
-  .footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 30px; align-items: center; justify-content: space-between; }
-  .footer .logo { color: var(--cream); }
-
-  /* ---------- Планшет и компьютер ---------- */
-  @media (min-width: 640px) {
-    .cards, .for-list, .steps, .info-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (min-width: 960px) {
-    section { padding-block: 96px; }
-    .hero { padding-block: 104px 112px; }
-    .benefits { padding-top: 0; }
-    .hero-actions .btn { flex: 0 0 auto; }
-    .cards, .formats, #start .steps { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .btn, details > summary::after { transition: none; }
-  }
+html,body{margin:0;padding:0;background:#FFFFFF;}
+body{font-family:'Inter Tight',system-ui,sans-serif;color:#0A0A0A;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+*{box-sizing:border-box;}
+a{color:inherit;}
+a:hover{color:inherit;opacity:.85;}
+input,button{font-family:inherit;}
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+x-if { display: contents; }
+x-if[hidden] { display: none; }
+:root { --wordAlign: center; --clockMargin: -3% 0; --mf-kgH: 190px; --mf-kgR: 41px; --mf-kgT: -18px; --mf-pM: 0; --mf-pMax: min(1100px, calc(100% - 210px)); --mf-pzH: 140px; --mf-pzL: 40%; --mf-pzT: calc(100% + 4px); --mf-c1L: 2%; --mf-c1T: 46%; --mf-c1B: auto; --mf-c2R: 2%; --mf-c2T: 40%; --mf-c2B: auto; --ab-pad: 56px 64px 96px; --ab-word: 487px; --ab-bodyDisplay: flex; --ab-bodyMt: -165px; --ab-photoW: 560px; --ab-wrapM: 300px 0 0 -84px; --ab-wrapW: 600px; --ab-cardPad: 56px 56px 56px 84px; --ab-name: 48px; --ab-roleM: 0 -56px 28px 0; --ab-role: 14px; --ab-clip: polygon(100% 0, 100% 100%, 12px 97.7%, 16px 95.7%, 4px 93.9%, 4px 91.7%, 19px 88.1%, 4px 85.6%, 16px 83.3%, 3px 80.1%, 20px 77.5%, 18px 74.6%, 2px 72.5%, 19px 68.7%, 17px 66.1%, 16px 63.4%, 7px 61.7%, 8px 59.5%, 17px 56.0%, 20px 51.8%, 10px 49.5%, 11px 46.2%, 11px 42.9%, 10px 39.1%, 3px 36.3%, 5px 34.1%, 12px 32.3%, 5px 30.7%, 14px 27.5%, 20px 23.4%, 14px 21.7%, 4px 18.0%, 4px 15.6%, 13px 11.9%, 5px 9.0%, 11px 5.9%, 19px 3.1%, 10px 0.0%) }
+@media (max-width: 699px) { :root { --wordAlign: start; --clockMargin: calc(7.4vw - 38px) -6% 0; --mf-kgH: 96px; --mf-kgR: 16px; --mf-kgT: -50px; --mf-pM: 60px 0 0; --mf-pMax: 1100px; --mf-pzH: 80px; --mf-pzL: 6%; --mf-pzT: calc(100% + 4px); --mf-c1L: 5%; --mf-c1T: auto; --mf-c1B: 37%; --mf-c2R: 34%; --mf-c2T: auto; --mf-c2B: 19%; --ab-pad: 28px 16px 64px; --ab-word: 127px; --ab-bodyDisplay: block; --ab-bodyMt: -36px; --ab-photoW: 100%; --ab-wrapM: -64px 0 0 20px; --ab-wrapW: auto; --ab-cardPad: 44px 24px 32px 26px; --ab-name: 30px; --ab-roleM: 0 -24px 28px 0; --ab-role: 11px; --ab-clip: polygon(0.0% 5px, 5.1% 4px, 9.8% 4px, 13.8% 5px, 17.2% 18px, 22.5% 7px, 28.1% 5px, 32.0% 16px, 36.8% 4px, 42.7% 5px, 46.1% 14px, 49.8% 7px, 52.5% 3px, 57.1% 6px, 61.7% 8px, 65.8% 17px, 70.0% 11px, 75.5% 5px, 78.5% 17px, 83.9% 6px, 87.1% 14px, 92.9% 5px, 98.7% 16px, 100% 10px, 100% 100%, 0 100%) } }
+#bar { transition: opacity .25s, transform .25s; }
+#bar.off { opacity: 0; transform: translateY(-100%); pointer-events: none; }
+.fx1:hover{background:#C4F52E !important; transform:translateY(-1px) !important}
+.fx2:active{transform:scale(0.97) !important}
+.fx3:hover{background:#C4F52E !important; transform:translateY(-1px) !important}
+.fx4:active{transform:scale(0.97) !important}
+.fx5:hover{background:#C4F52E !important; transform:translateY(-2px) !important}
+.fx6:active{transform:scale(0.98) !important}
+.fx7:hover{background:#EDEDED !important}
+.fx8:active{transform:scale(0.98) !important}
+.fx9:hover{background:var(--card) !important}
+.fx10:hover{background:#C4F52E !important; transform:translateY(-2px) !important}
+.fx11:active{transform:scale(0.98) !important}
+.fx12:hover{background:#2B2B2B !important; transform:translateY(-2px) !important}
+.fx13:active{transform:scale(0.98) !important}
+.fx14:hover{background:#C4F52E !important; transform:translateY(-2px) !important}
+.fx15:active{transform:scale(0.98) !important}
+.fx16:focus{border-color:var(--fg) !important; box-shadow:0 0 0 4px #D1FF42 !important}
+.fx17:focus{border-color:var(--fg) !important; box-shadow:0 0 0 4px #D1FF42 !important}
+.fx18:hover{background:#C4F52E !important; transform:translateY(-2px) !important}
+.fx19:active{transform:scale(0.98) !important}
+.fx20:hover{background:var(--card) !important}
 </style>
 </head>
 <body>
+<main id="top" style="font-family:'Inter Tight',system-ui,sans-serif; overflow:hidden;">
 
-<header class="top">
-  <div class="wrap">
-    <a class="logo" href="#top">EROTRAVERSE</a>
-    <a class="btn btn-primary" href="#zapis">Записаться</a>
-  </div>
+<x-if data-if="bar">
+<header id="bar" class="off" data-screen-label="01 Шапка (при прокрутке)" style="position:fixed; top:0; left:0; right:0; z-index:50; background:rgba(255,255,255,0.9); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid #EDEDED; padding:10px clamp(20px,4.5vw,64px);">
+<div style="max-width:1312px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+<a href="#top" style="font-family:Oswald,sans-serif; font-weight:700; font-size:24px; letter-spacing:0.02em; color:#0A0A0A; text-decoration:none;">EROTRAVERSE</a>
+<a class="fx1 fx2" href="#signup" style="display:inline-flex; align-items:center; gap:12px; min-height:48px; padding:6px 6px 6px 20px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-weight:600; font-size:16px; text-decoration:none; transition:transform .2s, background .2s;">Записаться<span style="width:36px; height:36px; border-radius:50%; background:#0A0A0A; color:#D1FF42; display:inline-flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></span></a>
+</div>
 </header>
+</x-if>
 
-<main id="top">
+<section data-screen-label="01–02 Главный экран" style="background:#FFFFFF; color:#0A0A0A; position:relative; padding:clamp(20px,2vw,28px) clamp(20px,4.5vw,64px) clamp(40px,4vw,56px);">
+<div style="max-width:1312px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(16px,2vw,24px);">
+<header data-screen-label="01 Шапка" style="position:relative; z-index:3; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+<a href="#top" style="font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(26px,2.2vw,32px); letter-spacing:0.02em; line-height:1; color:#0A0A0A; text-decoration:none;">EROTRAVERSE</a>
+<a class="fx3 fx4" href="#signup" style="display:inline-flex; align-items:center; gap:14px; min-height:52px; padding:6px 6px 6px 22px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-weight:600; font-size:16px; text-decoration:none; transition:transform .2s, background .2s;">Записаться<span style="width:40px; height:40px; border-radius:50%; background:#0A0A0A; color:#D1FF42; display:inline-flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></span></a>
+</header>
+<div style="display:grid; justify-items:center; align-items:center;">
+<div aria-hidden="true" style="grid-area:1 / 1; align-self:var(--wordAlign); position:relative; z-index:0; font-family:Oswald,sans-serif; font-weight:700; font-size:15.8vw; line-height:0.82; letter-spacing:-0.005em; color:#E6E6E6; white-space:nowrap; text-align:center; user-select:none;">EROTRAVERSE</div>
+<div style="grid-area:1 / 1; position:relative; z-index:1; width:max(43vw, min(100%, 420px)); max-width:660px; margin:var(--clockMargin);">
+<div aria-hidden="true" style="position:absolute; z-index:0; left:50%; top:50%; width:165%; aspect-ratio:1 / 1; transform:translate(-50%,-50%); border-radius:50%; pointer-events:none; background:radial-gradient(circle closest-side, rgba(209,255,66,.46) 0%, rgba(209,255,66,.33) 30%, rgba(209,255,66,.21) 50%, rgba(209,255,66,.09) 70%, rgba(209,255,66,0) 100%);"></div>
+<svg id="clock" viewBox="0 0 400 400" role="img" aria-label="Часы: вместо цифр — 12 неоновых поз" style="position:relative; z-index:1; display:block; width:100%; height:auto;">
+<defs><filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<g id="poses" filter="url(#glow)"></g>
+<g id="c-hour"><rect x="194.5" y="104" width="11" height="112" rx="1.5" fill="#0A0A0A"/></g>
+<g id="c-minute"><rect x="196.5" y="52" width="7" height="164" rx="1.5" fill="#0A0A0A"/></g>
+<g id="c-second"><rect x="199" y="44" width="2" height="186" fill="#0A0A0A"/></g>
+<circle cx="200" cy="200" r="8" fill="#0A0A0A"/></svg>
+</div>
+</div>
+<div style="position:relative; z-index:2; display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:24px;">
+<div style="flex:1 1 420px; display:flex; flex-direction:column; align-items:flex-start; gap:16px;">
+<span style="display:inline-flex; align-items:center; min-height:36px; padding:0 16px; border-radius:999px; border:1.5px solid #0A0A0A; font-size:15px; font-weight:500;">Тренировки для женщин · 18+</span>
+<h1 style="margin:0; max-width:16em; font-size:clamp(28px,2.7vw,40px); line-height:1.08; font-weight:700; letter-spacing:-0.035em; text-wrap:balance;">EROTRAVERSE — <em style="font-style:italic; font-weight:600;">интимный фитнес</em> для силы и чувственности</h1>
+</div>
+<div style="flex:0 1 560px; display:flex; flex-wrap:wrap; gap:12px;">
+<a data-telegram="trial" class="fx5 fx6" href="https://t.me/erotraverse_request_bot?start=trial" target="_blank" rel="noopener" style="flex:1 1 280px; display:flex; align-items:center; justify-content:space-between; gap:14px; min-height:60px; padding:6px 6px 6px 26px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-weight:600; font-size:17px; text-decoration:none; transition:transform .2s, background .2s;">Записаться на одно занятие<span style="flex:none; width:48px; height:48px; border-radius:50%; background:#0A0A0A; color:#D1FF42; display:inline-flex; align-items:center; justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></span></a>
+<a class="fx7 fx8" href="#signup" style="flex:0 1 200px; display:flex; align-items:center; justify-content:flex-start; min-height:60px; padding:0 26px; border-radius:999px; border:1.5px solid #0A0A0A; color:#0A0A0A; font-weight:600; font-size:17px; text-decoration:none; transition:background .2s;">Все форматы</a>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- 1. Главный экран: название, для кого, оффер -->
-  <section class="hero">
-    <div class="wrap">
-      <span class="eyebrow">Тренировки для женщин · 18+</span>
-      <h1>EROTRAVERSE — <em>интимный фитнес</em> для силы и чувственности</h1>
-      <p class="hero-for">
-        Фитнес, в котором вместе со всем телом работают интимные мышцы. Для женщин,
-        которые хотят укрепить тазовое дно, лучше чувствовать своё тело и увереннее двигаться —
-        в том числе в близости.
-      </p>
-      <p class="hero-offer">
-        <strong>Начните с одного занятия:</strong> познакомьтесь с практикой и тренером
-        и поймите, подходит ли вам формат, — без долгих обязательств.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-light" href="https://t.me/erotraverse_request_bot?start=trial" data-telegram="trial" target="_blank" rel="noopener">Записаться на одно занятие</a>
-        <a class="btn btn-ghost" href="#zapis">Все форматы</a>
-      </div>
-      <ul class="hero-facts">
-        <li>Авторская методика с 2011 года</li>
-        <li>Занятия в студии и онлайн</li>
-        <li>Спокойная женская атмосфера</li>
-      </ul>
-    </div>
-  </section>
+<section data-screen-label="02 Главный экран — продолжение" data-tone="W" style="--bg:#FFFFFF;--fg:#0A0A0A;--mut:#5C5C5C;--hg:#8F8F8F;--card:#EDEDED;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:clamp(32px,4vw,64px) clamp(20px,4.5vw,64px) clamp(72px,8vw,120px);">
+<div style="max-width:1312px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(28px,4vw,56px);">
+<div style="display:flex; flex-wrap:wrap; gap:clamp(20px,4vw,64px); align-items:stretch;">
+<p style="flex:3 1 420px; margin:0; font-size:clamp(22px,2.4vw,34px); line-height:1.22; font-weight:500; letter-spacing:-0.025em; text-wrap:pretty;">Фитнес, в котором вместе со всем телом работают интимные мышцы. <span style="color:var(--hg);">Для женщин, которые хотят укрепить тазовое дно, лучше чувствовать своё тело и увереннее двигаться — в том числе в близости.</span></p>
+<div style="flex:2 1 300px; background:var(--card); border-radius:28px; padding:clamp(22px,2.4vw,32px); display:flex; flex-direction:column; justify-content:space-between; gap:24px;">
+<span style="align-self:flex-start; display:inline-flex; align-items:center; height:28px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">Начните с одного занятия</span>
+<p class="hero-offer" style="margin:0; font-size:18px; line-height:1.45; text-wrap:pretty;"><strong style="font-weight:700;">Начните с одного занятия:</strong> познакомьтесь с практикой и тренером и поймите, подходит ли вам формат, — без долгих обязательств.</p>
+</div>
+</div>
+<div style="display:flex; flex-wrap:wrap; gap:10px;">
+<span style="display:inline-flex; align-items:center; gap:10px; min-height:48px; padding:0 22px; border-radius:999px; border:1.5px solid var(--fg); font-size:16px; font-weight:500;"><span style="width:8px; height:8px; border-radius:50%; background:#39FF14; box-shadow:0 0 10px #39FF14;"></span>Авторская методика с 2011 года</span>
+<span style="display:inline-flex; align-items:center; min-height:48px; padding:0 22px; border-radius:999px; border:1.5px solid var(--line); font-size:16px; font-weight:500;">Занятия в студии и онлайн</span>
+<span style="display:inline-flex; align-items:center; min-height:48px; padding:0 22px; border-radius:999px; background:var(--card); font-size:16px; font-weight:500;">Спокойная женская атмосфера</span>
+</div>
+</div>
+</section>
 
-  <!-- 2. Описание тренировки -->
-  <section id="o-trenirovke">
-    <div class="wrap">
-      <h2 class="section-title">Что такое EROTRAVERSE</h2>
-      <div class="section-lead">
-        <p>
-          Это фитнес-тренировка под музыку, в которой вместе со всем телом работают мышцы тазового дна.
-          Их не видно в зеркале, но именно они поддерживают внутренние органы,
-          помогают держать осанку и влияют на яркость ощущений.
-        </p>
-        <p>
-          Сначала вы учитесь находить эти мышцы, правильно сокращать и — что не менее важно — расслаблять.
-          Потом включать их в движении, в разных положениях тела, пока это не станет привычкой.
-        </p>
-      </div>
+<section id="o-trenirovke" data-screen-label="03 Что такое EROTRAVERSE" data-tone="W" style="--bg:#FFFFFF;--fg:#0A0A0A;--mut:#5C5C5C;--hg:#8F8F8F;--card:#EDEDED;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:clamp(56px,7vw,112px) clamp(20px,4.5vw,64px) clamp(72px,9vw,136px); border-top:1px solid var(--card);">
+<div style="max-width:1312px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(32px,4vw,56px);">
+<span style="align-self:flex-start; display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">Что такое EROTRAVERSE</span>
+<h2 style="margin:0; max-width:1180px; font-size:clamp(28px,4.2vw,62px); line-height:1.06; font-weight:600; letter-spacing:-0.04em; text-wrap:pretty;">Это фитнес-тренировка под музыку, в которой вместе со всем телом работают мышцы тазового дна. <span style="color:var(--hg);">Их не видно в зеркале, но именно они поддерживают внутренние органы, помогают держать осанку и влияют на яркость ощущений.</span></h2>
+<div style="display:flex; flex-wrap:wrap; gap:24px; justify-content:flex-end;">
+<p style="flex:0 1 560px; margin:0; padding-top:24px; border-top:1.5px solid var(--fg); font-size:clamp(17px,1.4vw,20px); line-height:1.5; color:var(--mut); text-wrap:pretty;">Сначала вы учитесь находить эти мышцы, правильно сокращать и — что не менее важно — расслаблять. Потом включать их в движении, в разных положениях тела, пока это не станет привычкой.</p>
+</div>
+</div>
+</section>
 
-      <h3 class="for-title">Кому подойдёт</h3>
-      <ul class="for-list">
-        <li>Хотите укрепить интимные мышцы и лучше чувствовать тело</li>
-        <li>Готовитесь к родам или восстанавливаетесь после них (с разрешения врача)</li>
-        <li>Желание близости угасло, и хочется снова разжечь огонь страсти — в 30, в 50 и в любом возрасте</li>
-        <li>Мечтаете освоить искусство красивого, изящного секса и получать от близости больше удовольствия</li>
-        <li>Тренажёры пылятся в ящике, а дома заниматься лень — на занятии вас ждут тренер, музыка и женская компания</li>
-        <li>Любите фитнес и ищете что-то новенькое — или фитнес никогда не любили: этот полюбите</li>
-      </ul>
-    </div>
-  </section>
+<section id="komu" data-screen-label="03 Кому подойдёт" data-tone="G" style="--bg:#EDEDED;--fg:#0A0A0A;--mut:#4F4F4F;--hg:#808080;--card:#FFFFFF;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:clamp(72px,9vw,136px) clamp(20px,4.5vw,64px);">
+<div style="max-width:1312px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(32px,5vw,80px);">
+<div style="flex:1 1 300px; display:flex; flex-direction:column; gap:24px;">
+<span style="align-self:flex-start; display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">03</span>
+<h2 style="margin:0; font-family:Oswald,sans-serif; font-weight:700; text-transform:uppercase; font-size:clamp(56px,8vw,120px); line-height:0.9; letter-spacing:-0.01em;">Кому<br>подойдёт</h2>
+</div>
+<ol style="flex:2 1 560px; margin:0; padding:0; list-style:none; display:flex; flex-direction:column;">
+<li style="display:flex; gap:clamp(16px,2vw,32px); padding:clamp(18px,2vw,28px) 0; border-top:1.5px solid var(--fg);"><span style="flex:none; width:2.2em; font-size:15px; font-weight:600; color:var(--hg); padding-top:0.5em;">01</span><span style="font-size:clamp(22px,2.5vw,36px); line-height:1.15; font-weight:500; letter-spacing:-0.03em; text-wrap:pretty;">Хотите укрепить интимные мышцы и лучше чувствовать тело</span></li>
+<li style="display:flex; gap:clamp(16px,2vw,32px); padding:clamp(18px,2vw,28px) 0; border-top:1.5px solid var(--line);"><span style="flex:none; width:2.2em; font-size:15px; font-weight:600; color:var(--hg); padding-top:0.5em;">02</span><span style="font-size:clamp(22px,2.5vw,36px); line-height:1.15; font-weight:500; letter-spacing:-0.03em; text-wrap:pretty;">Готовитесь к родам или восстанавливаетесь после них (с разрешения врача)</span></li>
+<li style="display:flex; gap:clamp(16px,2vw,32px); padding:clamp(18px,2vw,28px) 0; border-top:1.5px solid var(--line);"><span style="flex:none; width:2.2em; font-size:15px; font-weight:600; color:var(--hg); padding-top:0.5em;">03</span><span style="font-size:clamp(22px,2.5vw,36px); line-height:1.15; font-weight:500; letter-spacing:-0.03em; text-wrap:pretty;">Желание близости угасло, и хочется снова разжечь огонь страсти — в 30, в 50 и в любом возрасте</span></li>
+<li style="display:flex; gap:clamp(16px,2vw,32px); padding:clamp(18px,2vw,28px) 0; border-top:1.5px solid var(--line);"><span style="flex:none; width:2.2em; font-size:15px; font-weight:600; color:var(--hg); padding-top:0.5em;">04</span><span style="font-size:clamp(22px,2.5vw,36px); line-height:1.15; font-weight:500; letter-spacing:-0.03em; text-wrap:pretty;">Мечтаете освоить искусство красивого, изящного секса и получать от близости больше удовольствия</span></li>
+<li style="display:flex; gap:clamp(16px,2vw,32px); padding:clamp(18px,2vw,28px) 0; border-top:1.5px solid var(--line);"><span style="flex:none; width:2.2em; font-size:15px; font-weight:600; color:var(--hg); padding-top:0.5em;">05</span><span style="font-size:clamp(22px,2.5vw,36px); line-height:1.15; font-weight:500; letter-spacing:-0.03em; text-wrap:pretty;">Тренажёры пылятся в ящике, а дома заниматься лень — на занятии вас ждут тренер, музыка и женская компания</span></li>
+<li style="display:flex; gap:clamp(16px,2vw,32px); padding:clamp(18px,2vw,28px) 0; border-top:1.5px solid var(--line); border-bottom:1.5px solid var(--line);"><span style="flex:none; width:2.2em; font-size:15px; font-weight:600; color:var(--hg); padding-top:0.5em;">06</span><span style="font-size:clamp(22px,2.5vw,36px); line-height:1.15; font-weight:500; letter-spacing:-0.03em; text-wrap:pretty;">Любите фитнес и ищете что-то новенькое — или фитнес никогда не любили: этот полюбите</span></li>
+</ol>
+</div>
+</section>
 
-  <!-- Для жизни, а не для коврика: чем EROTRAVERSE отличается -->
-  <section class="benefits" id="otlichie">
-    <div class="wrap">
-      <h2 class="section-title">Для жизни, а не для коврика</h2>
-      <p class="section-lead">
-        Интимные мышцы нужны нам не лёжа на коврике, а в жизни: когда мы <em class="accent-words">двигаемся, танцуем, любим</em>.
-        Поэтому на EROTRAVERSE они тренируются именно так — в движении и под музыку.
-      </p>
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🌊</div>
-          <h3>Мышцы в движении</h3>
-          <p>Стоя, на коленях, на боку, в прогибе: в каждом положении интимные мышцы работают по-своему. Мы проходим их все, чтобы мышцы были сильными в любой позе, а не в одной.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🔁</div>
-          <h3>Навык, а не упражнение</h3>
-          <p>Цель — нейронная связь «движение → сокращение». Тело запоминает её как привычку: вы ничего не контролируете, а мышцы сжимаются сами, пока вы виртуозно и пластично двигаетесь в позах Камасутры.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">📳</div>
-          <h3>Видно, что получается</h3>
-          <p>Можно заниматься с тренажёром с обратной связью: его вибрация подсказывает, работают ли мышцы.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🔥</div>
-          <h3>Полноценный фитнес</h3>
-          <p>Кардио, сила, пластика и растяжка в одной тренировке — работает всё тело, а не одна зона.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🪜</div>
-          <h3>Постепенно и безопасно</h3>
-          <p>Сначала правильное сокращение, потом движение, и только потом скорость. Никто не торопит.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+<section id="otlichie" data-screen-label="04 Для жизни, а не для коврика" data-tone="W" style="--bg:#FFFFFF;--fg:#0A0A0A;--mut:#5C5C5C;--hg:#8F8F8F;--card:#EDEDED;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg);">
+<div style="position:relative; overflow:hidden; background:var(--stage); padding:clamp(56px,7vw,104px) clamp(20px,4.5vw,64px) clamp(270px,19vw,280px);">
+<svg aria-hidden="true" viewBox="0 0 1000 300" preserveAspectRatio="none" style="position:absolute; left:0; bottom:0; width:100%; height:36%; color:var(--line);"><g stroke="currentColor" stroke-width="1" fill="none" vector-effect="non-scaling-stroke"><path d="M500 0 L-700 300" vector-effect="non-scaling-stroke"></path><path d="M500 0 L-300 300" vector-effect="non-scaling-stroke"></path><path d="M500 0 L0 300" vector-effect="non-scaling-stroke"></path><path d="M500 0 L220 300" vector-effect="non-scaling-stroke"></path><path d="M500 0 L400 300" vector-effect="non-scaling-stroke"></path><path d="M500 0 L600 300" vector-effect="non-scaling-stroke"></path><path d="M500 0 L780 300" vector-effect="non-scaling-stroke"></path><path d="M500 0 L1000 300" vector-effect="non-scaling-stroke"></path><path d="M500 0 L1300 300" vector-effect="non-scaling-stroke"></path><path d="M500 0 L1700 300" vector-effect="non-scaling-stroke"></path><path d="M0 2 H1000" vector-effect="non-scaling-stroke"></path><path d="M0 60 H1000" vector-effect="non-scaling-stroke"></path><path d="M0 140 H1000" vector-effect="non-scaling-stroke"></path><path d="M0 250 H1000" vector-effect="non-scaling-stroke"></path></g></svg>
+<div style="position:relative; z-index:1; max-width:1312px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:clamp(20px,3vw,40px);">
+<span style="display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">Для жизни, а не для коврика</span>
+<h2 aria-label="Двигаемся. Танцуем. Любим." style="margin:0; font-family:Oswald,sans-serif; font-weight:700; text-transform:uppercase; text-align:center; font-size:clamp(52px,16.5vw,250px); line-height:1; letter-spacing:-0.01em; color:var(--giant);">Двигаемся.<br>Танцуем.<br>Любим.</h2>
+</div>
+<span aria-hidden="true" style="position:absolute; z-index:4; left:var(--mf-c1L); top:var(--mf-c1T); bottom:var(--mf-c1B); transform:rotate(-8deg); filter:blur(1.5px); opacity:.85; background:#FFFFFF; color:#0A0A0A; padding:clamp(8px,1vw,14px) clamp(12px,1.4vw,20px); border-radius:10px; box-shadow:0 18px 40px rgba(0,0,0,0.18); font-family:Oswald,sans-serif; font-weight:600; text-transform:uppercase; font-size:clamp(14px,1.8vw,28px); line-height:1;">Культ тела</span>
+<span aria-hidden="true" style="position:absolute; z-index:4; right:var(--mf-c2R); top:var(--mf-c2T); bottom:var(--mf-c2B); max-width:clamp(130px,13.5vw,196px); transform:rotate(4deg); background:#FFFFFF; color:#0A0A0A; padding:clamp(8px,1vw,14px) clamp(12px,1.4vw,18px); border-radius:10px; box-shadow:0 18px 40px rgba(0,0,0,0.16); font-weight:600; font-size:clamp(14px,1.25vw,18px); line-height:1.15;">Авторская методика с 2011 года</span>
+<span aria-hidden="true" style="position:absolute; z-index:1; left:12%; bottom:9%; transform:rotate(5deg); filter:blur(0.7px); background:#FFFFFF; color:#0A0A0A; padding:clamp(8px,1vw,14px) clamp(12px,1.4vw,20px); border-radius:10px; box-shadow:0 18px 40px rgba(0,0,0,0.14); font-family:Oswald,sans-serif; font-weight:600; text-transform:uppercase; font-size:clamp(13px,1.6vw,24px); line-height:1;">Сила и чувственность</span>
+<span aria-hidden="true" style="position:absolute; z-index:4; right:14%; bottom:13%; transform:rotate(-10deg); filter:blur(0.6px); background:#D1FF42; color:#0A0A0A; padding:clamp(8px,1vw,14px) clamp(14px,1.6vw,24px); border-radius:999px; box-shadow:0 18px 40px rgba(0,0,0,0.18); font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(18px,2.4vw,36px); line-height:1;">18+</span>
+</div>
+<div style="padding:clamp(56px,7vw,112px) clamp(20px,4.5vw,64px) clamp(72px,9vw,136px);">
+<div style="max-width:1312px; margin:0 auto; position:relative; display:flex; flex-direction:column; gap:clamp(40px,5vw,72px);">
+<img src="img/kgoal.png" alt="" aria-hidden="true" style="position:absolute; z-index:5; right:var(--mf-kgR); top:var(--mf-kgT); height:var(--mf-kgH); width:auto; transform:rotate(-24deg); filter:drop-shadow(0 22px 22px rgba(0,0,0,.22)); pointer-events:none;">
+<p style="margin:var(--mf-pM); max-width:var(--mf-pMax); font-size:clamp(24px,3vw,44px); line-height:1.15; font-weight:500; letter-spacing:-0.03em; text-wrap:pretty;">Интимные мышцы нужны нам не лёжа на коврике, а в жизни: когда мы <em style="font-style:italic; font-weight:600; text-decoration:underline; text-decoration-color:#D1FF42; text-decoration-thickness:0.14em; text-underline-offset:0.14em;">двигаемся, танцуем, любим</em>. Поэтому на EROTRAVERSE они тренируются именно так — в движении и под музыку.</p>
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,228px),1fr)); gap:12px;">
+<div style="background:var(--inv); color:var(--invfg); border-radius:28px; padding:24px; min-height:clamp(220px,24vw,340px); display:flex; flex-direction:column; justify-content:space-between; gap:24px;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:44px; line-height:1;">01</span><div style="display:flex; flex-direction:column; gap:10px;"><h3 style="margin:0; font-size:22px; line-height:1.15; font-weight:600; letter-spacing:-0.02em;">Мышцы в движении.</h3><p style="margin:0; font-size:15px; line-height:1.45; opacity:0.78;">Стоя, на коленях, на боку, в прогибе: в каждом положении интимные мышцы работают по-своему. Мы проходим их все, чтобы мышцы были сильными в любой позе, а не в одной.</p></div></div>
+<div style="background:var(--card); border-radius:28px; padding:24px; min-height:clamp(220px,24vw,340px); display:flex; flex-direction:column; justify-content:space-between; gap:24px;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:44px; line-height:1;">02</span><div style="display:flex; flex-direction:column; gap:10px;"><h3 style="margin:0; font-size:22px; line-height:1.15; font-weight:600; letter-spacing:-0.02em;">Навык, а не упражнение.</h3><p style="margin:0; font-size:15px; line-height:1.45; color:var(--mut);">Цель — нейронная связь «движение → сокращение». Тело запоминает её как привычку: вы ничего не контролируете, а мышцы сжимаются сами, пока вы виртуозно и пластично двигаетесь в позах Камасутры.</p></div></div>
+<div style="background:var(--card); border-radius:28px; padding:24px; min-height:clamp(220px,24vw,340px); display:flex; flex-direction:column; justify-content:space-between; gap:24px;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:44px; line-height:1;">03</span><div style="display:flex; flex-direction:column; gap:10px;"><h3 style="margin:0; font-size:22px; line-height:1.15; font-weight:600; letter-spacing:-0.02em;">Видно, что получается.</h3><p style="margin:0; font-size:15px; line-height:1.45; color:var(--mut);">Можно заниматься с тренажёром с обратной связью: его вибрация подсказывает, работают ли мышцы.</p></div></div>
+<div style="background:var(--card); border-radius:28px; padding:24px; min-height:clamp(220px,24vw,340px); display:flex; flex-direction:column; justify-content:space-between; gap:24px;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:44px; line-height:1;">04</span><div style="display:flex; flex-direction:column; gap:10px;"><h3 style="margin:0; font-size:22px; line-height:1.15; font-weight:600; letter-spacing:-0.02em;">Полноценный фитнес.</h3><p style="margin:0; font-size:15px; line-height:1.45; color:var(--mut);">Кардио, сила, пластика и растяжка в одной тренировке — работает всё тело, а не одна зона.</p></div></div>
+<div style="background:var(--inv); color:var(--invfg); border-radius:28px; padding:24px; min-height:clamp(220px,24vw,340px); display:flex; flex-direction:column; justify-content:space-between; gap:24px;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:44px; line-height:1;">05</span><div style="display:flex; flex-direction:column; gap:10px;"><h3 style="margin:0; font-size:22px; line-height:1.15; font-weight:600; letter-spacing:-0.02em;">Постепенно и безопасно.</h3><p style="margin:0; font-size:15px; line-height:1.45; opacity:0.78;">Сначала правильное сокращение, потом движение, и только потом скорость. Никто не торопит.</p></div></div>
+</div>
+<img src="img/puzzle.svg" alt="" aria-hidden="true" style="position:absolute; z-index:5; left:var(--mf-pzL); top:var(--mf-pzT); height:var(--mf-pzH); width:auto; transform:rotate(16deg); filter:drop-shadow(0 22px 22px rgba(0,0,0,.22)); pointer-events:none;">
+</div>
+</div>
+</section>
 
-  <!-- 2. Профиты -->
-  <section class="benefits" id="polza">
-    <div class="wrap">
-      <h2 class="section-title">Что даёт тренировка</h2>
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">💪</div>
-          <h3>Сильное тазовое дно</h3>
-          <p>Мышцы становятся крепче и выносливее и лучше поддерживают органы малого таза.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">✨</div>
-          <h3>Больше чувствительности</h3>
-          <p>Тренированные мышцы и хорошее кровообращение делают ощущения ярче.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🌸</div>
-          <h3>Мягкое восстановление</h3>
-          <p>Подготовка к родам и бережное восстановление после них — когда врач разрешил нагрузку.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🧘‍♀️</div>
-          <h3>Тонус всего тела</h3>
-          <p>Работа с собственным весом, кардио и растяжка: спина, живот и ягодицы в тонусе, осанка ровнее.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🤍</div>
-          <h3>Контакт с телом</h3>
-          <p>Учитесь чувствовать напряжение и отпускать зажимы, которые мешают расслабиться.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon" aria-hidden="true">🌙</div>
-          <h3>Пластика и уверенность</h3>
-          <p>Движения становятся свободнее и красивее — это чувствуется и в теле, и в близости.</p>
-        </article>
-        <article class="card card-wide">
-          <div class="card-icon" aria-hidden="true">🌿</div>
-          <h3>Психоэмоциональная разгрузка</h3>
-          <p>Новое движение будит мозг и эмоции: напряжение уходит, приходят лёгкость и свежие идеи.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+<section id="polza" data-screen-label="05 Что даёт тренировка" data-tone="W" style="--bg:#FFFFFF;--fg:#0A0A0A;--mut:#5C5C5C;--hg:#8F8F8F;--card:#EDEDED;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:clamp(72px,9vw,136px) clamp(20px,4.5vw,64px); border-top:1px solid var(--card); position:relative;">
+<div style="max-width:1312px; margin:0 auto; position:relative; display:flex; flex-direction:column; gap:clamp(36px,5vw,72px);">
+<div style="display:flex; flex-direction:column; gap:24px; max-width:900px; padding-right:clamp(110px,16vw,0px);">
+<span style="align-self:flex-start; display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">05</span>
+<h2 style="margin:0; font-size:clamp(40px,7vw,104px); line-height:0.96; font-weight:600; letter-spacing:-0.05em;">Что даёт <span style="color:var(--hg);">тренировка</span></h2>
+</div>
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr)); gap:16px; align-items:start;">
+<div style="background:var(--card); border-radius:24px; padding:clamp(22px,2.2vw,32px); min-height:230px; display:flex; flex-direction:column; justify-content:space-between; gap:28px;"><h3 style="margin:0; font-size:clamp(24px,2.2vw,32px); line-height:1.05; font-weight:600; letter-spacing:-0.035em;">Сильное тазовое дно.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut); max-width:340px;">Мышцы становятся крепче и выносливее и лучше поддерживают органы малого таза.</p></div>
+<div style="background:#D1FF42; color:#0A0A0A; border-radius:24px; padding:clamp(22px,2.2vw,32px); min-height:230px; margin-top:clamp(0px,(100vw - 1100px) * 100,96px); display:flex; flex-direction:column; justify-content:space-between; gap:28px;"><h3 style="margin:0; font-size:clamp(24px,2.2vw,32px); line-height:1.05; font-weight:600; letter-spacing:-0.035em;">Больше чувствительности.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:#2B2B2B; max-width:340px;">Тренированные мышцы и хорошее кровообращение делают ощущения ярче.</p></div>
+<div style="background:var(--card); border-radius:24px; padding:clamp(22px,2.2vw,32px); min-height:230px; margin-top:clamp(0px,(100vw - 1100px) * 100,40px); display:flex; flex-direction:column; justify-content:space-between; gap:28px;"><h3 style="margin:0; font-size:clamp(24px,2.2vw,32px); line-height:1.05; font-weight:600; letter-spacing:-0.035em;">Мягкое восстановление.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut); max-width:340px;">Подготовка к родам и бережное восстановление после них — когда врач разрешил нагрузку.</p></div>
+<div style="background:var(--card); border-radius:24px; padding:clamp(22px,2.2vw,32px); min-height:230px; display:flex; flex-direction:column; justify-content:space-between; gap:28px;"><h3 style="margin:0; font-size:clamp(24px,2.2vw,32px); line-height:1.05; font-weight:600; letter-spacing:-0.035em;">Тонус всего тела.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut); max-width:340px;">Работа с собственным весом, кардио и растяжка: спина, живот и ягодицы в тонусе, осанка ровнее.</p></div>
+<div style="background:var(--card); border-radius:24px; padding:clamp(22px,2.2vw,32px); min-height:230px; margin-top:clamp(0px,(100vw - 1100px) * 100,96px); display:flex; flex-direction:column; justify-content:space-between; gap:28px;"><h3 style="margin:0; font-size:clamp(24px,2.2vw,32px); line-height:1.05; font-weight:600; letter-spacing:-0.035em;">Контакт с телом.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut); max-width:340px;">Учитесь чувствовать напряжение и отпускать зажимы, которые мешают расслабиться.</p></div>
+<div style="background:var(--inv); color:var(--invfg); border-radius:24px; padding:clamp(22px,2.2vw,32px); min-height:230px; margin-top:clamp(0px,(100vw - 1100px) * 100,40px); display:flex; flex-direction:column; justify-content:space-between; gap:28px;"><h3 style="margin:0; font-size:clamp(24px,2.2vw,32px); line-height:1.05; font-weight:600; letter-spacing:-0.035em;">Пластика и уверенность.</h3><p style="margin:0; font-size:16px; line-height:1.45; opacity:0.78; max-width:340px;">Движения становятся свободнее и красивее — это чувствуется и в теле, и в близости.</p></div>
+<div style="grid-column:1 / -1; background:#EDEDED; border-radius:24px; padding:clamp(22px,2.2vw,32px); min-height:230px; display:flex; flex-direction:column; justify-content:space-between; gap:28px;"><h3 style="margin:0; font-size:clamp(24px,2.2vw,32px); line-height:1.05; font-weight:600; letter-spacing:-0.035em;">Психоэмоциональная разгрузка.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut); max-width:340px;">Новое движение будит мозг и эмоции: напряжение уходит, приходят лёгкость и свежие идеи.</p></div>
+</div>
+</div>
+</section>
 
-  <!-- 2. Что внутри занятия -->
-  <section class="inside" id="vnutri">
-    <div class="wrap">
-      <h2 class="section-title">Что будет на занятии</h2>
-      <p class="section-lead">Каждая тренировка строится по понятной схеме — от разминки к практике и расслаблению.</p>
-      <ol class="steps">
-        <li>
-          <h3>Разминка</h3>
-          <p>Суставы, подвижность таза и спины, лёгкое растягивание — тело разогревается и включается.</p>
-        </li>
-        <li>
-          <h3>Настройка на мышцы</h3>
-          <p>Находим интимные мышцы и вспоминаем главное: сокращать мягко внутрь и вверх, не задерживая дыхание и не напрягая живот.</p>
-        </li>
-        <li>
-          <h3>Основная практика</h3>
-          <p>Красивые движения в позах Камасутры, соединённые с сокращением интимных мышц. Мы двигаемся в такт музыке и постепенно переходим с первой скорости на вторую и третью. Цель — чтобы тело запомнило этот навык: двигаться плавно и чувственно, а мышцы сжимались сами, рефлекторно.</p>
-        </li>
-        <li>
-          <h3>Растяжка</h3>
-          <p>Спокойная растяжка без боли и рывков: снимаем напряжение, мягко улучшаем гибкость.</p>
-        </li>
-        <li>
-          <h3>Расслабление</h3>
-          <p>Медленная осознанная практика: чувствуем мышцы и отпускаем напряжение — уходите с лёгкостью в теле.</p>
-        </li>
-      </ol>
-    </div>
-  </section>
+<section data-screen-label="Капсулы" data-tone="W" style="--bg:#FFFFFF;--fg:#0A0A0A;--mut:#5C5C5C;--hg:#8F8F8F;--card:#EDEDED;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:0 clamp(20px,4.5vw,64px) clamp(56px,6vw,96px);">
+<div aria-label="Двигаемся · Танцуем · Любим" style="max-width:1312px; margin:0 auto; display:flex; flex-wrap:wrap; gap:12px;">
+<span style="flex:1 1 260px; min-height:clamp(84px,9vw,136px); border-radius:999px; background:#D1FF42; color:#0A0A0A; display:flex; align-items:center; justify-content:center; font-family:Oswald,sans-serif; font-weight:700; text-transform:uppercase; font-size:clamp(30px,4.4vw,64px); line-height:1;">Двигаемся</span>
+<span style="flex:1 1 260px; min-height:clamp(84px,9vw,136px); border-radius:999px; background:linear-gradient(115deg,#F6F6F6 0%,#9C9C9C 22%,#EDEDED 42%,#FFFFFF 50%,#7E7E7E 72%,#D6D6D6 100%); color:#0A0A0A; display:flex; align-items:center; justify-content:center; font-family:Oswald,sans-serif; font-weight:700; text-transform:uppercase; font-size:clamp(30px,4.4vw,64px); line-height:1;">Танцуем</span>
+<span style="flex:1 1 260px; min-height:clamp(84px,9vw,136px); border-radius:999px; background:var(--inv); color:var(--invfg); display:flex; align-items:center; justify-content:center; font-family:Oswald,sans-serif; font-weight:700; text-transform:uppercase; font-size:clamp(30px,4.4vw,64px); line-height:1;">Любим</span>
+</div>
+</section>
 
-  <!-- С чего начать: путь новой ученицы -->
-  <section id="start">
-    <div class="wrap">
-      <h2 class="section-title">С чего начать</h2>
-      <p class="section-lead">Результат даёт регулярность. Поэтому мы идём постепенно — от знакомства к привычке.</p>
-      <ol class="steps">
-        <li>
-          <h3>Одно занятие</h3>
-          <p>Знакомитесь с практикой и тренером, понимаете, откликается ли вам формат.</p>
-        </li>
-        <li>
-          <h3>Базовый навык</h3>
-          <p>Учитесь правильно сокращать и расслаблять мышцы.</p>
-        </li>
-        <li>
-          <h3>Регулярные тренировки</h3>
-          <p>Абонемент — 2 занятия в неделю. За месяц тело просыпается: мышцы тазового дна включаются, а ощущения становятся глубже. Тренировки создают особые состояния и новые эмоции.</p>
-        </li>
-      </ol>
+<section id="vnutri" data-screen-label="06 Что будет на занятии" data-tone="G" style="--bg:#EDEDED;--fg:#0A0A0A;--mut:#4F4F4F;--hg:#808080;--card:#FFFFFF;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:clamp(72px,9vw,136px) clamp(20px,4.5vw,64px);">
+<div style="max-width:1312px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(40px,5vw,80px);">
+<div style="display:flex; flex-direction:column; gap:24px;">
+<span style="align-self:flex-start; display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">Что будет на занятии</span>
+<h2 style="margin:0; max-width:1100px; font-size:clamp(32px,5vw,72px); line-height:1.02; font-weight:600; letter-spacing:-0.045em; text-wrap:pretty;">Каждая тренировка строится по понятной схеме — <span style="color:var(--hg);">от разминки к практике и расслаблению.</span></h2>
+</div>
+<ol style="margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:clamp(28px,2vw,24px) 20px;">
+<li style="flex:1 1 200px; display:flex; flex-direction:column; gap:18px;"><div style="position:relative; height:16px; display:flex; align-items:center;"><span style="position:absolute; left:0; right:-20px; height:2px; background:var(--fg);"></span><span style="position:relative; width:16px; height:16px; border-radius:50%; background:#39FF14; box-shadow:0 0 12px #39FF14;"></span></div><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(48px,5vw,76px); line-height:0.9;">01</span><h3 style="margin:0; font-size:22px; font-weight:600; letter-spacing:-0.02em;">Разминка.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut);">Суставы, подвижность таза и спины, лёгкое растягивание — тело разогревается и включается.</p></li>
+<li style="flex:1 1 200px; display:flex; flex-direction:column; gap:18px;"><div style="position:relative; height:16px; display:flex; align-items:center;"><span style="position:absolute; left:0; right:-20px; height:2px; background:var(--fg);"></span><span style="position:relative; width:16px; height:16px; border-radius:50%; background:var(--fg);"></span></div><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(48px,5vw,76px); line-height:0.9;">02</span><h3 style="margin:0; font-size:22px; font-weight:600; letter-spacing:-0.02em;">Настройка на мышцы.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut);">Находим интимные мышцы и вспоминаем главное: сокращать мягко внутрь и вверх, не задерживая дыхание и не напрягая живот.</p></li>
+<li style="flex:2 1 320px; display:flex; flex-direction:column; gap:18px;"><div style="position:relative; height:16px; display:flex; align-items:center;"><span style="position:absolute; left:0; right:-20px; height:2px; background:var(--fg);"></span><span style="position:relative; width:16px; height:16px; border-radius:50%; background:var(--fg);"></span></div><div style="background:var(--inv); color:var(--invfg); border-radius:28px; padding:clamp(22px,2.2vw,30px); display:flex; flex-direction:column; gap:16px;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(48px,5vw,76px); line-height:0.9;">03</span><h3 style="margin:0; font-size:22px; font-weight:600; letter-spacing:-0.02em;">Основная практика.</h3><p style="margin:0; font-size:16px; line-height:1.45; opacity:0.8;">Красивые движения в позах Камасутры, соединённые с сокращением интимных мышц. Мы двигаемся в такт музыке и постепенно переходим с первой скорости на вторую и третью. Цель — чтобы тело запомнило этот навык: двигаться плавно и чувственно, а мышцы сжимались сами, рефлекторно.</p></div></li>
+<li style="flex:1 1 200px; display:flex; flex-direction:column; gap:18px;"><div style="position:relative; height:16px; display:flex; align-items:center;"><span style="position:absolute; left:0; right:-20px; height:2px; background:var(--fg);"></span><span style="position:relative; width:16px; height:16px; border-radius:50%; background:var(--fg);"></span></div><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(48px,5vw,76px); line-height:0.9;">04</span><h3 style="margin:0; font-size:22px; font-weight:600; letter-spacing:-0.02em;">Растяжка.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut);">Спокойная растяжка без боли и рывков: снимаем напряжение, мягко улучшаем гибкость.</p></li>
+<li style="flex:1 1 200px; display:flex; flex-direction:column; gap:18px;"><div style="position:relative; height:16px; display:flex; align-items:center;"><span style="position:absolute; left:0; right:0; height:2px; background:var(--fg);"></span><span style="position:relative; width:16px; height:16px; border-radius:50%; border:2px solid var(--fg); background:var(--bg);"></span></div><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(48px,5vw,76px); line-height:0.9;">05</span><h3 style="margin:0; font-size:22px; font-weight:600; letter-spacing:-0.02em;">Расслабление.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut);">Медленная осознанная практика: чувствуем мышцы и отпускаем напряжение — уходите с лёгкостью в теле.</p></li>
+</ol>
+</div>
+</section>
 
-      <div class="info-grid">
-        <div class="info-box">
-          <h3>Что взять с собой</h3>
-          <ul>
-            <li>Лосины и топ из тонкой эластичной ткани — не утягивающие ягодицы и бёдра</li>
-            <li>Бутылку воды</li>
-            <li>Резинку для волос</li>
-            <li>Тренажёр, если он у вас есть. Если нет — подскажем, какой выбрать</li>
-          </ul>
-          <p class="info-foot">Занимаемся босиком. Коврики есть в студии.</p>
-        </div>
-        <details class="info-box contra">
-          <summary><h3>Противопоказания</h3></summary>
-          <p>Если врач разрешает вам секс и спорт — заниматься можно. Отложите тренировки, если у вас:</p>
-          <ul>
-            <li>беременность;</li>
-            <li>острое воспаление мочеполовой системы, обострение хронического заболевания или инфекция;</li>
-            <li>меньше 6–8 недель после операции;</li>
-            <li>онкологическое заболевание;</li>
-            <li>гипертония, астма или болезни сердца;</li>
-            <li>острая травма или обострение болезни позвоночника, коленей, суставов.</li>
-          </ul>
-          <p class="info-foot">После родов — с разрешения врача. Тренировки не заменяют лечение: если сомневаетесь, сначала посоветуйтесь с врачом.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+<section id="foto" data-screen-label="06+ Фото и видео" data-tone="W" style="--bg:#FFFFFF;--fg:#0A0A0A;--mut:#5C5C5C;--hg:#8F8F8F;--card:#EDEDED;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A; background:var(--bg); color:var(--fg); padding:clamp(72px,9vw,136px) 0; border-top:1px solid var(--card);">
+<div style="max-width:1312px; margin:0 auto; padding:0 clamp(20px,4.5vw,64px); display:flex; flex-direction:column; gap:24px;">
+<span style="align-self:flex-start; display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">Галерея</span>
+<h2 style="margin:0; font-size:clamp(40px,7vw,104px); line-height:0.96; font-weight:600; letter-spacing:-0.05em;">Фото и видео</h2>
+</div>
+<ul style="list-style:none; margin:clamp(36px,5vw,64px) auto 0; max-width:1440px; display:flex; align-items:flex-start; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:0 clamp(20px,4.5vw,64px); padding:0 clamp(20px,4.5vw,64px) 8px; scrollbar-width:none;">
+<li style="flex:1 0 170px; scroll-snap-align:start; aspect-ratio:9 / 16; border-radius:24px; background:repeating-linear-gradient(135deg, var(--card) 0 12px, transparent 12px 24px); border:1px solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px;"><span style="width:64px; height:64px; border-radius:50%; background:#D1FF42; color:#0A0A0A; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 12px 30px -10px rgba(0,0,0,0.35);"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"></path></svg></span><span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#5C5C5C; background:#FFFFFF; padding:8px 14px; border-radius:999px;">видео позже</span></li>
+<li style="flex:1.3333 0 227px; scroll-snap-align:start; aspect-ratio:3 / 4; border-radius:24px; background:repeating-linear-gradient(135deg, var(--card) 0 12px, transparent 12px 24px); border:1px solid var(--line); display:flex; align-items:center; justify-content:center;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#5C5C5C; background:#FFFFFF; padding:8px 14px; border-radius:999px;">фото позже</span></li>
+<li style="flex:1 0 170px; scroll-snap-align:start; aspect-ratio:9 / 16; border-radius:24px; background:repeating-linear-gradient(135deg, var(--card) 0 12px, transparent 12px 24px); border:1px solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px;"><span style="width:64px; height:64px; border-radius:50%; background:#D1FF42; color:#0A0A0A; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 12px 30px -10px rgba(0,0,0,0.35);"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"></path></svg></span><span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#5C5C5C; background:#FFFFFF; padding:8px 14px; border-radius:999px;">видео позже</span></li>
+<li style="flex:1.3333 0 227px; scroll-snap-align:start; aspect-ratio:3 / 4; border-radius:24px; background:repeating-linear-gradient(135deg, var(--card) 0 12px, transparent 12px 24px); border:1px solid var(--line); display:flex; align-items:center; justify-content:center;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#5C5C5C; background:#FFFFFF; padding:8px 14px; border-radius:999px;">фото позже</span></li>
+<li style="flex:1 0 170px; scroll-snap-align:start; aspect-ratio:9 / 16; border-radius:24px; background:repeating-linear-gradient(135deg, var(--card) 0 12px, transparent 12px 24px); border:1px solid var(--line); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px;"><span style="width:64px; height:64px; border-radius:50%; background:#D1FF42; color:#0A0A0A; display:inline-flex; align-items:center; justify-content:center; box-shadow:0 12px 30px -10px rgba(0,0,0,0.35);"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"></path></svg></span><span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#5C5C5C; background:#FFFFFF; padding:8px 14px; border-radius:999px;">видео позже</span></li>
+<li style="flex:1.3333 0 227px; scroll-snap-align:start; aspect-ratio:3 / 4; border-radius:24px; background:repeating-linear-gradient(135deg, var(--card) 0 12px, transparent 12px 24px); border:1px solid var(--line); display:flex; align-items:center; justify-content:center;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:#5C5C5C; background:#FFFFFF; padding:8px 14px; border-radius:999px;">фото позже</span></li>
+</ul>
+</section>
 
-  <!-- Частые вопросы -->
-  <section class="inside" id="voprosy">
-    <div class="wrap">
-      <h2 class="section-title">Частые вопросы</h2>
-      <div class="faq">
-        <details>
-          <summary>Это эротический танец?</summary>
-          <p>Нет. Это фитнес: работа с собственным весом, кардио, растяжка и тренировка интимных мышц.
-          В нём есть пластика и красивые движения, но главное — мышцы и то, как они работают. Занимаемся в спортивной одежде, в женской группе.</p>
-        </details>
-        <details>
-          <summary>Нужна ли подготовка или растяжка?</summary>
-          <p>Нет. Всё осваиваем постепенно: сначала правильное сокращение мышц, потом движение, и только потом скорость.
-          Если что-то пока не получается, делаете в своём темпе.</p>
-        </details>
-        <details>
-          <summary>Нужен ли тренажёр?</summary>
-          <p>На первое занятие — нет. Для регулярных тренировок удобно заниматься с вагинальным тренажёром с обратной связью:
-          его вибрация показывает, работают ли мышцы. Расскажем, какой выбрать.</p>
-        </details>
-        <details>
-          <summary>Чем это лучше упражнений Кегеля?</summary>
-          <p>Упражнения Кегеля — хорошее начало, и базовый навык мы тоже отрабатываем. Но в жизни мышцы нужны не лёжа,
-          а в движении. На EROTRAVERSE они учатся включаться в разных положениях тела, пока это не станет привычкой.</p>
-        </details>
-        <details>
-          <summary>Можно ли после родов?</summary>
-          <p>Да, когда врач разрешил физическую нагрузку. Начнём бережно — с базового навыка.</p>
-        </details>
-        <details>
-          <summary>Когда будет результат?</summary>
-          <p>Это зависит от регулярности. Короткие домашние упражнения каждый день и две тренировки в неделю —
-          и через несколько недель вы почувствуете разницу. Чтобы навык закрепился, обычно нужно от 1 до 3 месяцев.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+<section id="trener" data-screen-label="07 Обо мне" style="position:relative; background:#0A0A0A; padding:var(--ab-pad); overflow:hidden;">
+<h2 style="position:relative; z-index:2; margin:0; display:flex; justify-content:center; color:#FFFFFF; font-family:Oswald,sans-serif; font-weight:500; font-size:var(--ab-word); line-height:.8; text-transform:uppercase; white-space:nowrap;"><span id="w" style="display:inline-block; transform:scaleX(.75);">Обо мне</span></h2>
+<div style="position:relative; display:var(--ab-bodyDisplay); align-items:flex-start; margin-top:var(--ab-bodyMt);">
+<div role="img" aria-label="Тренер EROTRAVERSE" style="position:relative; z-index:1; width:var(--ab-photoW); flex:none; aspect-ratio:1242 / 2141; background:#D9D9D9 url(img/about-photo.jpg) center top / cover;"></div>
+<div style="position:relative; z-index:3; margin:var(--ab-wrapM); width:var(--ab-wrapW); filter:drop-shadow(0 18px 30px rgba(0,0,0,.45));">
+<div style="padding:var(--ab-cardPad); color:#0A0A0A; font-family:Jost,sans-serif; font-weight:400; background:linear-gradient(104deg, #FFFFFF 0%, #F4F4F2 38%, #E7E7E5 39%, #F6F6F4 52%, #FFFFFF 100%); clip-path:var(--ab-clip);">
+<p style="margin:0 0 18px; font-weight:500; font-size:var(--ab-name); line-height:1; letter-spacing:.1em; text-transform:uppercase;">Имя Фамилия</p>
+<p style="display:flex; align-items:center; gap:16px; margin:var(--ab-roleM); font-size:var(--ab-role); font-weight:500; letter-spacing:.12em; text-transform:uppercase;">Тренер · автор методики<span aria-hidden="true" style="flex:1; height:1.5px; background:#0A0A0A;"></span></p>
+<span style="display:inline-block; margin-bottom:22px; padding:6px 14px; border-radius:999px; background:#D1FF42; font-size:14px; font-weight:500;">Авторская методика с 2011 года</span>
+<p style="margin:0 0 14px; font-size:16px; line-height:1.5; color:#1A1A1A;">Текст позже: 3–4 коротких абзаца о себе и о методике.</p>
+<div><span style="display:block; height:10px; margin:0 0 12px; border-radius:5px; background:#DADAD7; width:100%"></span><span style="display:block; height:10px; margin:0 0 12px; border-radius:5px; background:#DADAD7; width:92%"></span><span style="display:block; height:10px; margin:0 0 12px; border-radius:5px; background:#DADAD7; width:97%"></span><span style="display:block; height:10px; margin:0 0 12px; border-radius:5px; background:#DADAD7; width:64%"></span><span style="display:block; height:10px; margin:0 0 12px; border-radius:5px; background:#DADAD7; width:100%"></span><span style="display:block; height:10px; margin:0 0 12px; border-radius:5px; background:#DADAD7; width:88%"></span><span style="display:block; height:10px; margin:0 0 12px; border-radius:5px; background:#DADAD7; width:45%"></span></div>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- 3. Три кнопки-заявки: каждая ведёт в Telegram -->
-  <section id="zapis">
-    <div class="wrap">
-      <h2 class="section-title">Записаться</h2>
-      <p class="section-lead">Выберите формат — откроется наш Telegram-бот. В нём можно записаться, узнать цены и задать вопрос.</p>
-      <div class="formats">
-        <article class="format">
-          <span class="format-tag">Разовое посещение</span>
-          <h3>Одно занятие</h3>
-          <p class="format-price">2 000 CZK</p>
-          <p>Чтобы познакомиться с практикой и тренером.</p>
-          <a class="btn btn-outline btn-block" href="https://t.me/erotraverse_request_bot?start=trial" data-telegram="trial" target="_blank" rel="noopener">
-            <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
-            Записаться на одно занятие
-          </a>
-        </article>
-        <article class="format format-accent">
-          <span class="format-tag">Регулярно</span>
-          <h3>Абонемент</h3>
-          <p class="format-price">12 000 CZK <span>8 занятий за 30 дней · 1 500 CZK за занятие</span></p>
-          <p>Серия занятий — чтобы результат появился и закрепился.</p>
-          <a class="btn btn-light btn-block" href="https://t.me/erotraverse_request_bot?start=pass" data-telegram="subscription" target="_blank" rel="noopener">
-            <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
-            Купить абонемент
-          </a>
-        </article>
-        <article class="format">
-          <span class="format-tag">По запросу</span>
-          <h3>Онлайн</h3>
-          <p class="format-price">80 EUR <span>за занятие</span></p>
-          <p>Занятия онлайн, если нет возможности прийти в студию.</p>
-          <a class="btn btn-outline btn-block" href="https://t.me/erotraverse_request_bot?start=online" data-telegram="online" target="_blank" rel="noopener">
-            <svg class="tg-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.8-3.6-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.4 13.1 1.7 11.6c-1-.3-1-1 .2-1.5L20.4 3c.9-.3 1.6.2 1.5 1.3Z"/></svg>
-            Запросить онлайн
-          </a>
-        </article>
-      </div>
-      <p class="formats-hint">Заявка ни к чему не обязывает · <a href="https://t.me/erotraverse_request_bot?start=faq" data-telegram="faq" target="_blank" rel="noopener">Задать вопрос в Telegram</a></p>
-    </div>
-  </section>
+<section id="start" data-screen-label="08 С чего начать" data-tone="W" style="--bg:#FFFFFF;--fg:#0A0A0A;--mut:#5C5C5C;--hg:#8F8F8F;--card:#EDEDED;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:clamp(72px,9vw,136px) clamp(20px,4.5vw,64px); border-top:1px solid var(--card);">
+<div style="max-width:1312px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(40px,5vw,80px);">
+<div style="display:flex; flex-direction:column; gap:24px;">
+<span style="align-self:flex-start; display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">С чего начать</span>
+<h2 style="margin:0; max-width:1100px; font-size:clamp(32px,5vw,72px); line-height:1.02; font-weight:600; letter-spacing:-0.045em; text-wrap:pretty;">Результат даёт регулярность. <span style="color:var(--hg);">Поэтому мы идём постепенно — от знакомства к привычке.</span></h2>
+</div>
+<ol style="margin:0; padding:0; list-style:none; display:flex; flex-wrap:wrap; align-items:flex-end; gap:12px;">
+<li style="flex:1 1 280px; background:var(--card); border-radius:28px; padding:clamp(22px,2.4vw,32px); min-height:clamp(220px,20vw,280px); display:flex; flex-direction:column; justify-content:space-between; gap:24px;"><span style="display:flex; justify-content:space-between; align-items:flex-start;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(64px,6vw,96px); line-height:0.85;">1</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></span><div style="display:flex; flex-direction:column; gap:10px;"><h3 style="margin:0; font-size:24px; font-weight:600; letter-spacing:-0.025em;">Одно занятие.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut);">Знакомитесь с практикой и тренером, понимаете, откликается ли вам формат.</p></div></li>
+<li style="flex:1 1 280px; background:var(--card); border-radius:28px; padding:clamp(22px,2.4vw,32px); min-height:clamp(220px,25vw,350px); display:flex; flex-direction:column; justify-content:space-between; gap:24px;"><span style="display:flex; justify-content:space-between; align-items:flex-start;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(64px,6vw,96px); line-height:0.85;">2</span><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></span><div style="display:flex; flex-direction:column; gap:10px;"><h3 style="margin:0; font-size:24px; font-weight:600; letter-spacing:-0.025em;">Базовый навык.</h3><p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut);">Учитесь правильно сокращать и расслаблять мышцы.</p></div></li>
+<li style="flex:1.3 1 320px; background:var(--inv); color:var(--invfg); border-radius:28px; padding:clamp(22px,2.4vw,32px); min-height:clamp(260px,31vw,430px); display:flex; flex-direction:column; justify-content:space-between; gap:24px;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(64px,6vw,96px); line-height:0.85;">3</span><div style="display:flex; flex-direction:column; gap:10px;"><h3 style="margin:0; font-size:24px; font-weight:600; letter-spacing:-0.025em;">Регулярные тренировки.</h3><p style="margin:0; font-size:16px; line-height:1.45; opacity:0.8;">Абонемент — 2 занятия в неделю. За месяц тело просыпается: мышцы тазового дна включаются, а ощущения становятся глубже. Тренировки создают особые состояния и новые эмоции.</p></div></li>
+</ol>
+<div style="display:flex; flex-wrap:wrap; gap:16px; align-items:flex-start;">
+<div style="flex:1 1 380px; display:flex; flex-direction:column; gap:20px;">
+<h3 style="margin:0; font-size:clamp(26px,2.6vw,36px); font-weight:600; letter-spacing:-0.035em;">Что взять с собой</h3>
+<ul style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column;">
+<li style="display:flex; gap:14px; align-items:baseline; padding:14px 0; border-top:1px solid var(--line); font-size:17px; line-height:1.4;"><span style="flex:none; width:7px; height:7px; border-radius:50%; background:var(--fg); transform:translateY(-2px);"></span>Лосины и топ из тонкой эластичной ткани — не утягивающие ягодицы и бёдра</li>
+<li style="display:flex; gap:14px; align-items:baseline; padding:14px 0; border-top:1px solid var(--line); font-size:17px; line-height:1.4;"><span style="flex:none; width:7px; height:7px; border-radius:50%; background:var(--fg); transform:translateY(-2px);"></span>Бутылку воды</li>
+<li style="display:flex; gap:14px; align-items:baseline; padding:14px 0; border-top:1px solid var(--line); font-size:17px; line-height:1.4;"><span style="flex:none; width:7px; height:7px; border-radius:50%; background:var(--fg); transform:translateY(-2px);"></span>Резинку для волос</li>
+<li style="display:flex; gap:14px; align-items:baseline; padding:14px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font-size:17px; line-height:1.4;"><span style="flex:none; width:7px; height:7px; border-radius:50%; background:var(--fg); transform:translateY(-2px);"></span>Тренажёр, если он у вас есть. Если нет — подскажем, какой выбрать</li>
+</ul>
+<p style="margin:0; font-size:17px; line-height:1.4; font-weight:600;">Занимаемся босиком. Коврики есть в студии.</p>
+</div>
+<div style="flex:1 1 380px; border:1.5px solid var(--line); border-radius:28px; overflow:hidden;">
+<button class="fx9" type="button" data-toggle="contra" aria-expanded="false" style="--ib:transparent; --rot:0deg; width:100%; min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 16px 16px clamp(20px,2.4vw,28px); background:transparent; border:0; color:var(--fg); cursor:pointer; text-align:left;"><span style="font-size:clamp(22px,2.2vw,28px); font-weight:600; letter-spacing:-0.03em;">Противопоказания</span><span style="flex:none; width:44px; height:44px; border-radius:50%; background:var(--ib); color:#0A0A0A; border:1.5px solid var(--fg); display:inline-flex; align-items:center; justify-content:center; transition:transform .25s; transform:rotate(var(--rot));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button>
+<x-if data-if="contra" hidden>
+<div style="padding:0 clamp(20px,2.4vw,28px) clamp(20px,2.4vw,28px); display:flex; flex-direction:column; gap:14px; font-size:16px; line-height:1.5;">
+<p style="margin:0; font-weight:600;">Если врач разрешает вам секс и спорт — заниматься можно. Отложите тренировки, если у вас:</p>
+<ul style="margin:0; padding:0 0 0 20px; display:flex; flex-direction:column; gap:6px; color:var(--mut);">
+<li>беременность;</li>
+<li>острое воспаление мочеполовой системы, обострение хронического заболевания или инфекция;</li>
+<li>меньше 6–8 недель после операции;</li>
+<li>онкологическое заболевание;</li>
+<li>гипертония, астма или болезни сердца;</li>
+<li>острая травма или обострение болезни позвоночника, коленей, суставов.</li>
+</ul>
+<p style="margin:0;">После родов — с разрешения врача. Тренировки не заменяют лечение: если сомневаетесь, сначала посоветуйтесь с врачом.</p>
+</div>
+</x-if>
+</div>
+</div>
+</div>
+</section>
 
+<section id="otzyvy" data-screen-label="09 Отзывы" data-tone="G" style="--bg:#EDEDED;--fg:#0A0A0A;--mut:#4F4F4F;--hg:#808080;--card:#FFFFFF;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:clamp(72px,9vw,136px) 0;">
+<div style="max-width:1312px; margin:0 auto; padding:0 clamp(20px,4.5vw,64px); display:flex; flex-direction:column; gap:24px;">
+<span style="align-self:flex-start; display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">09</span>
+<h2 style="margin:0; font-family:Oswald,sans-serif; font-weight:700; text-transform:uppercase; font-size:clamp(56px,9vw,136px); line-height:0.9;">Отзывы</h2>
+</div>
+<div style="margin-top:clamp(36px,5vw,64px); display:flex; gap:clamp(24px,3vw,48px); overflow-x:auto; scroll-snap-type:x mandatory; padding:0 max(clamp(20px,4.5vw,64px), calc((100vw - 1312px) / 2)) 8px; scrollbar-width:none;">
+<figure style="flex:0 0 min(85vw,600px); scroll-snap-align:start; margin:0; padding:clamp(24px,2.6vw,36px); border-radius:28px; background:var(--card); display:flex; flex-direction:column; gap:28px;"><span aria-hidden="true" style="font-family:Oswald,sans-serif; font-weight:700; font-size:120px; line-height:0.6; height:56px; color:#0A0A0A;">«</span><blockquote style="margin:0; font-family:'Inter Tight',sans-serif; font-weight:400; font-size:clamp(16px,1.25vw,18px); line-height:1.5; color:#0A0A0A; text-wrap:pretty;">Я пробовала в простых позах, всё отлично! <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">Муж очень заценил, сказал, что там стало намного уже и мои ощущения тоже совсем другие.</span></blockquote></figure>
+<figure style="flex:0 0 min(85vw,600px); scroll-snap-align:start; margin:0; padding:clamp(24px,2.6vw,36px); border-radius:28px; background:var(--card); display:flex; flex-direction:column; gap:28px;"><span aria-hidden="true" style="font-family:Oswald,sans-serif; font-weight:700; font-size:120px; line-height:0.6; height:56px; color:#0A0A0A;">«</span><blockquote style="margin:0; font-family:'Inter Tight',sans-serif; font-weight:400; font-size:clamp(16px,1.25vw,18px); line-height:1.5; color:#0A0A0A; text-wrap:pretty;">И кстати, муж вчера сделал комплимент, что у меня сейчас <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">форма моей попы ну просто самая лучшая за 23 года</span>, что мы вместе! <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">Очень сексуальная, на ощупь прям чувствуется орех, подтянутая. И в целом всё тело подтянутое! Прям говорит, очень красиво смотреть на меня, это очень возбуждает!</span> Куда лучше — не знает, дальше только <span class="censor" style="position:relative; white-space:nowrap;">жопка<span aria-hidden="true" style="position:absolute; inset:-1px -2px; pointer-events:none; background-size:24px 24px; background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%230A0A0A%22%3E%3Crect%20x%3D%2212%22%20y%3D%220%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%220%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%228%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%222%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%228%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2214%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2216%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2212%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2214%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2216%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2212%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%226%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%222%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2216%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22/%3E%3C/svg%3E');"></span></span> бодибилдерши квадратная.</blockquote></figure>
+<figure style="flex:0 0 min(85vw,600px); scroll-snap-align:start; margin:0; padding:clamp(24px,2.6vw,36px); border-radius:28px; background:var(--card); display:flex; flex-direction:column; gap:28px;"><span aria-hidden="true" style="font-family:Oswald,sans-serif; font-weight:700; font-size:120px; line-height:0.6; height:56px; color:#0A0A0A;">«</span><blockquote style="margin:0; font-family:'Inter Tight',sans-serif; font-weight:400; font-size:clamp(16px,1.25vw,18px); line-height:1.5; color:#0A0A0A; text-wrap:pretty;"><span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">Таких ощущений я не испытывала ни на одной тренировке в моей жизни! Какая это лёгкость! Какая искра в глазах! На следующий день я мужа в прямом смысле слова <span class="censor" style="position:relative; white-space:nowrap;">затрахала<span aria-hidden="true" style="position:absolute; inset:-1px -2px; pointer-events:none; background-size:24px 24px; background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%230A0A0A%22%3E%3Crect%20x%3D%2212%22%20y%3D%220%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%220%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%228%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%222%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%228%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2214%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2216%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2212%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2214%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2216%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2212%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%226%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%222%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2216%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22/%3E%3C/svg%3E');"></span></span></span> — да и он выносливее стал как будто! И это после одной тренировки!!! Что же будет дальше?! <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">Благодарю Бога, что привёл меня сюда.</span> Целюсь на тренерский курс, хочу передавать эту методику всем женщинам! Каждая женщина должна внедрить это в свою жизнь! Это истинная и мощнейшая энергетика женщины.</blockquote></figure>
+<figure style="flex:0 0 min(85vw,600px); scroll-snap-align:start; margin:0; padding:clamp(24px,2.6vw,36px); border-radius:28px; background:var(--card); display:flex; flex-direction:column; gap:28px;"><span aria-hidden="true" style="font-family:Oswald,sans-serif; font-weight:700; font-size:120px; line-height:0.6; height:56px; color:#0A0A0A;">«</span><blockquote style="margin:0; font-family:'Inter Tight',sans-serif; font-weight:400; font-size:clamp(16px,1.25vw,18px); line-height:1.5; color:#0A0A0A; text-wrap:pretty;"><span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">EROTRAVERSE зашёл в самое сердечко, и я хочу, чтобы эти тренировки остались со мной на всю жизнь</span>, хочу, чтобы у меня все позы получались на макс скорости в течение 2,5 минут! Да будет так!</blockquote></figure>
+<figure style="flex:0 0 min(85vw,600px); scroll-snap-align:start; margin:0; padding:clamp(24px,2.6vw,36px); border-radius:28px; background:var(--card); display:flex; flex-direction:column; gap:28px;"><span aria-hidden="true" style="font-family:Oswald,sans-serif; font-weight:700; font-size:120px; line-height:0.6; height:56px; color:#0A0A0A;">«</span><blockquote style="margin:0; font-family:'Inter Tight',sans-serif; font-weight:400; font-size:clamp(16px,1.25vw,18px); line-height:1.5; color:#0A0A0A; text-wrap:pretty;">Благодарю за внимание и чуткость! <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">Я на максимальной энергии! Порхаю весь день!</span> Спорт всегда со мной с рождения, но EROTRAVERSE — это вообще космос какой-то. Я ощущаю такие тонкие и маленькие мышцы, которых ранее не ощущала! Лёгкая приятная боль от нагрузки — восторг! <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">Вопросы решаются сами по себе! День в лёгкости и наслаждении!</span></blockquote></figure>
+<figure style="flex:0 0 min(85vw,600px); scroll-snap-align:start; margin:0; padding:clamp(24px,2.6vw,36px); border-radius:28px; background:var(--card); display:flex; flex-direction:column; gap:28px;"><span aria-hidden="true" style="font-family:Oswald,sans-serif; font-weight:700; font-size:120px; line-height:0.6; height:56px; color:#0A0A0A;">«</span><blockquote style="margin:0; font-family:'Inter Tight',sans-serif; font-weight:400; font-size:clamp(16px,1.25vw,18px); line-height:1.5; color:#0A0A0A; text-wrap:pretty;">Всё просто супер — состояние, настроение. И <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">отражение в зеркале поменялось. Я сегодня другая…</span> Представляете, девочки, <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">поменялось лицо</span>. Удивительно. <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">Я сегодня ещё прекрасней выгляжу))</span> Ну что за чудо.</blockquote></figure>
+<figure style="flex:0 0 min(85vw,600px); scroll-snap-align:start; margin:0; padding:clamp(24px,2.6vw,36px); border-radius:28px; background:var(--card); display:flex; flex-direction:column; gap:28px;"><span aria-hidden="true" style="font-family:Oswald,sans-serif; font-weight:700; font-size:120px; line-height:0.6; height:56px; color:#0A0A0A;">«</span><blockquote style="margin:0; font-family:'Inter Tight',sans-serif; font-weight:400; font-size:clamp(16px,1.25vw,18px); line-height:1.5; color:#0A0A0A; text-wrap:pretty;"><span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">Я пробовала дофига разных направлений, танцевальных и не только, но ваша практика — выше всех похвал!</span> Собрано всё воедино, и главное — для кого? Для нас, самых красивых, самых счастливых!</blockquote></figure>
+<figure style="flex:0 0 min(85vw,600px); scroll-snap-align:start; margin:0; padding:clamp(24px,2.6vw,36px); border-radius:28px; background:var(--card); display:flex; flex-direction:column; gap:28px;"><span aria-hidden="true" style="font-family:Oswald,sans-serif; font-weight:700; font-size:120px; line-height:0.6; height:56px; color:#0A0A0A;">«</span><blockquote style="margin:0; font-family:'Inter Tight',sans-serif; font-weight:400; font-size:clamp(16px,1.25vw,18px); line-height:1.5; color:#0A0A0A; text-wrap:pretty;">Огромное спасибо вам, что рассказали про тренажёр, он реально помогает, даже при редком использовании, так как из-за работы очень мало времени на занятия. Но <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">он помог справиться с недержанием, это для меня просто какая-то фантастика.</span> Если заниматься каждый день, думаю, будет вообще огонь!!! Спасибо вам огромное, <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">что открываете для женщин другую жизнь!!!</span></blockquote></figure>
+<figure style="flex:0 0 min(85vw,600px); scroll-snap-align:start; margin:0; padding:clamp(24px,2.6vw,36px); border-radius:28px; background:var(--card); display:flex; flex-direction:column; gap:28px;"><span aria-hidden="true" style="font-family:Oswald,sans-serif; font-weight:700; font-size:120px; line-height:0.6; height:56px; color:#0A0A0A;">«</span><blockquote style="margin:0; font-family:'Inter Tight',sans-serif; font-weight:400; font-size:clamp(16px,1.25vw,18px); line-height:1.5; color:#0A0A0A; text-wrap:pretty;">Доброе утро! У меня тут мини-отзыв: напишу здесь, чтобы и поделиться, и зафиксировать изменения. Я продолжаю стараться заниматься ежедневно, конечно, и нашей практикой EROTRAVERSE, и вот что <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">заметила: с каждым разом ощущения в близости с партнёром становятся всё ярче и ярче — и даже в тех позах, в которых раньше чувствительность была очень слабая.</span> Плюс супруг сказал (хотя я даже и не спрашивала, сама в шоке), <span style="font-weight:600; background:linear-gradient(transparent 60%, #D1FF42 60%); -webkit-box-decoration-break:clone; box-decoration-break:clone;">что есть и визуальные изменения — <span class="censor" style="position:relative; white-space:nowrap;">малые губки<span aria-hidden="true" style="position:absolute; inset:-1px -2px; pointer-events:none; background-size:24px 24px; background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20fill%3D%22%230A0A0A%22%3E%3Crect%20x%3D%2212%22%20y%3D%220%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%220%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%228%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%222%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%228%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%224%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2214%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2216%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%226%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%228%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2212%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2214%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2216%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2210%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2212%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2212%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2218%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2222%22%20y%3D%2214%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%226%22%20y%3D%2216%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%224%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2210%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2218%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%220%22%20y%3D%2220%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%222%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22/%3E%3Crect%20x%3D%2216%22%20y%3D%2222%22%20width%3D%222%22%20height%3D%222%22/%3E%3C/svg%3E');"></span></span> раньше раскрывались сильнее, сейчас всё подтянулось.</span></blockquote></figure>
+</div>
+</section>
 
-  <!-- Форма заявки: отправляется в приёмник на Railway и сохраняется в базу Postgres -->
-  <section class="apply" id="forma">
-    <div class="wrap">
-      <h2 class="section-title">Или оставьте заявку здесь</h2>
-      <p class="section-lead">Напишите имя и контакт — мы сами свяжемся с вами и подберём время.</p>
-      <form class="form-card" id="lead-form" novalidate>
-        <div class="field">
-          <label for="lead-name">Имя</label>
-          <input type="text" id="lead-name" name="name" autocomplete="given-name" placeholder="Как к вам обращаться" maxlength="100" required>
-        </div>
-        <div class="field">
-          <label for="lead-contact">Контакт</label>
-          <input type="text" id="lead-contact" name="contact" autocomplete="tel" placeholder="Телефон или @ник в Telegram" maxlength="100" required>
-        </div>
-        <fieldset class="field">
-          <legend>Формат</legend>
-          <div class="pills">
-            <label class="pill"><input type="radio" name="format" value="trial" checked><span>Одно занятие</span></label>
-            <label class="pill"><input type="radio" name="format" value="pass"><span>Абонемент</span></label>
-            <label class="pill"><input type="radio" name="format" value="online"><span>Онлайн по запросу</span></label>
-          </div>
-        </fieldset>
-        <div class="hp" aria-hidden="true"><label>Сайт <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-        <button class="btn btn-primary btn-block" type="submit">Отправить заявку</button>
-        <p class="form-status" id="lead-status" role="status" hidden></p>
-      </form>
-    </div>
-  </section>
+<section id="voprosy" data-screen-label="10 Частые вопросы" data-tone="W" style="--bg:#FFFFFF;--fg:#0A0A0A;--mut:#5C5C5C;--hg:#8F8F8F;--card:#EDEDED;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:clamp(72px,9vw,136px) clamp(20px,4.5vw,64px);">
+<div style="max-width:1312px; margin:0 auto; display:flex; flex-wrap:wrap; gap:clamp(32px,5vw,80px);">
+<div style="flex:1 1 300px; display:flex; flex-direction:column; gap:24px;">
+<span style="align-self:flex-start; display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">10</span>
+<h2 style="margin:0; font-size:clamp(40px,5.6vw,84px); line-height:0.96; font-weight:600; letter-spacing:-0.05em;">Частые <span style="color:var(--hg);">вопросы</span></h2>
+</div>
+<div style="flex:2 1 560px; display:flex; flex-direction:column; border-bottom:1.5px solid var(--line);">
+<div style="border-top:1.5px solid var(--line);"><button type="button" data-faq="0" aria-expanded="true" style="--ib:#D1FF42; --rot:45deg; width:100%; min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0; background:transparent; border:0; color:var(--fg); cursor:pointer; text-align:left;"><span style="font-size:clamp(20px,1.9vw,26px); font-weight:500; letter-spacing:-0.025em;">Это эротический танец?</span><span style="flex:none; width:44px; height:44px; border-radius:50%; background:var(--ib); color:#0A0A0A; border:1.5px solid var(--fg); display:inline-flex; align-items:center; justify-content:center; transition:transform .25s; transform:rotate(var(--rot));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button><x-if data-if="f0"><p style="margin:0; padding:0 64px 24px 0; font-size:17px; line-height:1.55; color:var(--mut); max-width:720px;">Нет. Это фитнес: работа с собственным весом, кардио, растяжка и тренировка интимных мышц. В нём есть пластика и красивые движения, но главное — мышцы и то, как они работают. Занимаемся в спортивной одежде, в женской группе.</p></x-if></div>
+<div style="border-top:1.5px solid var(--line);"><button type="button" data-faq="1" aria-expanded="false" style="--ib:transparent; --rot:0deg; width:100%; min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0; background:transparent; border:0; color:var(--fg); cursor:pointer; text-align:left;"><span style="font-size:clamp(20px,1.9vw,26px); font-weight:500; letter-spacing:-0.025em;">Нужна ли подготовка или растяжка?</span><span style="flex:none; width:44px; height:44px; border-radius:50%; background:var(--ib); color:#0A0A0A; border:1.5px solid var(--fg); display:inline-flex; align-items:center; justify-content:center; transition:transform .25s; transform:rotate(var(--rot));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button><x-if data-if="f1" hidden><p style="margin:0; padding:0 64px 24px 0; font-size:17px; line-height:1.55; color:var(--mut); max-width:720px;">Нет. Всё осваиваем постепенно: сначала правильное сокращение мышц, потом движение, и только потом скорость. Если что-то пока не получается, делаете в своём темпе.</p></x-if></div>
+<div style="border-top:1.5px solid var(--line);"><button type="button" data-faq="2" aria-expanded="false" style="--ib:transparent; --rot:0deg; width:100%; min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0; background:transparent; border:0; color:var(--fg); cursor:pointer; text-align:left;"><span style="font-size:clamp(20px,1.9vw,26px); font-weight:500; letter-spacing:-0.025em;">Нужен ли тренажёр?</span><span style="flex:none; width:44px; height:44px; border-radius:50%; background:var(--ib); color:#0A0A0A; border:1.5px solid var(--fg); display:inline-flex; align-items:center; justify-content:center; transition:transform .25s; transform:rotate(var(--rot));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button><x-if data-if="f2" hidden><p style="margin:0; padding:0 64px 24px 0; font-size:17px; line-height:1.55; color:var(--mut); max-width:720px;">На первое занятие — нет. Для регулярных тренировок удобно заниматься с вагинальным тренажёром с обратной связью: его вибрация показывает, работают ли мышцы. Расскажем, какой выбрать.</p></x-if></div>
+<div style="border-top:1.5px solid var(--line);"><button type="button" data-faq="3" aria-expanded="false" style="--ib:transparent; --rot:0deg; width:100%; min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0; background:transparent; border:0; color:var(--fg); cursor:pointer; text-align:left;"><span style="font-size:clamp(20px,1.9vw,26px); font-weight:500; letter-spacing:-0.025em;">Чем это лучше упражнений Кегеля?</span><span style="flex:none; width:44px; height:44px; border-radius:50%; background:var(--ib); color:#0A0A0A; border:1.5px solid var(--fg); display:inline-flex; align-items:center; justify-content:center; transition:transform .25s; transform:rotate(var(--rot));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button><x-if data-if="f3" hidden><p style="margin:0; padding:0 64px 24px 0; font-size:17px; line-height:1.55; color:var(--mut); max-width:720px;">Упражнения Кегеля — хорошее начало, и базовый навык мы тоже отрабатываем. Но в жизни мышцы нужны не лёжа, а в движении. На EROTRAVERSE они учатся включаться в разных положениях тела, пока это не станет привычкой.</p></x-if></div>
+<div style="border-top:1.5px solid var(--line);"><button type="button" data-faq="4" aria-expanded="false" style="--ib:transparent; --rot:0deg; width:100%; min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0; background:transparent; border:0; color:var(--fg); cursor:pointer; text-align:left;"><span style="font-size:clamp(20px,1.9vw,26px); font-weight:500; letter-spacing:-0.025em;">Можно ли после родов?</span><span style="flex:none; width:44px; height:44px; border-radius:50%; background:var(--ib); color:#0A0A0A; border:1.5px solid var(--fg); display:inline-flex; align-items:center; justify-content:center; transition:transform .25s; transform:rotate(var(--rot));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button><x-if data-if="f4" hidden><p style="margin:0; padding:0 64px 24px 0; font-size:17px; line-height:1.55; color:var(--mut); max-width:720px;">Да, когда врач разрешил физическую нагрузку. Начнём бережно — с базового навыка.</p></x-if></div>
+<div style="border-top:1.5px solid var(--line);"><button type="button" data-faq="5" aria-expanded="false" style="--ib:transparent; --rot:0deg; width:100%; min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 0; background:transparent; border:0; color:var(--fg); cursor:pointer; text-align:left;"><span style="font-size:clamp(20px,1.9vw,26px); font-weight:500; letter-spacing:-0.025em;">Когда будет результат?</span><span style="flex:none; width:44px; height:44px; border-radius:50%; background:var(--ib); color:#0A0A0A; border:1.5px solid var(--fg); display:inline-flex; align-items:center; justify-content:center; transition:transform .25s; transform:rotate(var(--rot));"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></span></button><x-if data-if="f5" hidden><p style="margin:0; padding:0 64px 24px 0; font-size:17px; line-height:1.55; color:var(--mut); max-width:720px;">Это зависит от регулярности. Короткие домашние упражнения каждый день и две тренировки в неделю — и через несколько недель вы почувствуете разницу. Чтобы навык закрепился, обычно нужно от 1 до 3 месяцев.</p></x-if></div>
+</div>
+</div>
+</section>
+
+<section id="signup" data-screen-label="11–12 Записаться и форма" data-tone="W" style="--bg:#FFFFFF;--fg:#0A0A0A;--mut:#5C5C5C;--hg:#8F8F8F;--card:#EDEDED;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); position:relative; overflow:hidden; padding:clamp(72px,9vw,136px) clamp(20px,4.5vw,64px);"><span id="zapis" style="position:absolute"></span><span id="forma" style="position:absolute"></span>
+<div aria-hidden="true" style="position:absolute; left:-10%; right:-10%; top:18%; height:70%; background:radial-gradient(ellipse 50% 50% at 50% 50%, rgba(209,255,66,0.55) 0%, rgba(209,255,66,0) 70%); filter:blur(20px); pointer-events:none;"></div>
+<div style="position:relative; max-width:1312px; margin:0 auto; display:flex; flex-direction:column; gap:clamp(40px,5vw,72px);">
+<div style="display:flex; flex-direction:column; gap:24px; align-items:center; text-align:center;">
+<span style="display:inline-flex; align-items:center; height:30px; padding:0 14px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-size:13px; font-weight:600;">Записаться</span>
+<h2 style="margin:0; max-width:1000px; font-size:clamp(32px,5vw,72px); line-height:1.02; font-weight:600; letter-spacing:-0.045em; text-wrap:balance;">Выберите формат — откроется наш Telegram-бот. <span style="color:var(--hg);">В нём можно записаться, узнать цены и задать вопрос.</span></h2>
+</div>
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:16px; align-items:stretch;">
+<article style="background:var(--card); color:var(--fg); border-radius:28px; padding:clamp(22px,2.4vw,30px); display:flex; flex-direction:column; gap:20px;">
+<span style="font-size:clamp(56px,5.4vw,80px); line-height:0.9; font-weight:400; letter-spacing:-0.06em;">/01</span>
+<div style="display:flex; flex-direction:column; gap:12px;"><h3 style="margin:0; font-size:26px; font-weight:600; letter-spacing:-0.03em;">Одно занятие</h3><span style="align-self:flex-start; display:inline-flex; align-items:center; height:28px; padding:0 12px; border-radius:999px; border:1.5px solid var(--line); font-size:13px; font-weight:500;">Разовое посещение</span></div>
+<div style="display:flex; flex-direction:column; gap:6px; padding-top:20px; border-top:1px solid var(--line);"><span style="font-size:clamp(36px,3.4vw,48px); line-height:1; font-weight:600; letter-spacing:-0.04em;">2 000 CZK</span></div>
+<p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut); flex:1;">Чтобы познакомиться с практикой и тренером.</p>
+<a data-telegram="trial" class="fx10 fx11" href="https://t.me/erotraverse_request_bot?start=trial" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:56px; padding:6px 6px 6px 22px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-weight:600; font-size:16px; text-decoration:none; transition:transform .2s, background .2s;">Записаться на одно занятие<span style="flex:none; width:44px; height:44px; border-radius:50%; background:#0A0A0A; color:#D1FF42; display:inline-flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.8c-1.1.4-1.1 1.2-.2 1.5l4.6 1.4 1.7 5.4c.2.6.6.7 1.1.3l2.5-2.1 4.8 3.6c.8.5 1.4.2 1.6-.8l3-14.3c.3-1.2-.4-1.8-1.6-1.2Z"></path></svg></span></a>
+</article>
+<article style="background:#D1FF42; color:#0A0A0A; border-radius:28px; padding:clamp(22px,2.4vw,30px); display:flex; flex-direction:column; gap:20px; box-shadow:0 30px 60px -30px rgba(10,10,10,0.45);">
+<span style="font-size:clamp(56px,5.4vw,80px); line-height:0.9; font-weight:400; letter-spacing:-0.06em;">/02</span>
+<div style="display:flex; flex-direction:column; gap:12px;"><h3 style="margin:0; font-size:26px; font-weight:600; letter-spacing:-0.03em;">Абонемент</h3><span style="align-self:flex-start; display:inline-flex; align-items:center; height:28px; padding:0 12px; border-radius:999px; background:#0A0A0A; color:#D1FF42; font-size:13px; font-weight:600;">Регулярно</span></div>
+<div style="display:flex; flex-direction:column; gap:8px; padding-top:20px; border-top:1px solid rgba(10,10,10,0.25);"><span style="font-size:clamp(36px,3.4vw,48px); line-height:1; font-weight:600; letter-spacing:-0.04em;">12 000 CZK</span><span style="font-size:15px; font-weight:600;">8 занятий за 30 дней · 1 500 CZK за занятие</span></div>
+<p style="margin:0; font-size:16px; line-height:1.45; color:#2B2B2B; flex:1;">Серия занятий — чтобы результат появился и закрепился.</p>
+<a data-telegram="subscription" class="fx12 fx13" href="https://t.me/erotraverse_request_bot?start=pass" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:56px; padding:6px 6px 6px 22px; border-radius:999px; background:#0A0A0A; color:#FFFFFF; font-weight:600; font-size:16px; text-decoration:none; transition:transform .2s, background .2s;">Купить абонемент<span style="flex:none; width:44px; height:44px; border-radius:50%; background:#D1FF42; color:#0A0A0A; display:inline-flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.8c-1.1.4-1.1 1.2-.2 1.5l4.6 1.4 1.7 5.4c.2.6.6.7 1.1.3l2.5-2.1 4.8 3.6c.8.5 1.4.2 1.6-.8l3-14.3c.3-1.2-.4-1.8-1.6-1.2Z"></path></svg></span></a>
+</article>
+<article style="background:var(--card); color:var(--fg); border-radius:28px; padding:clamp(22px,2.4vw,30px); display:flex; flex-direction:column; gap:20px;">
+<span style="font-size:clamp(56px,5.4vw,80px); line-height:0.9; font-weight:400; letter-spacing:-0.06em;">/03</span>
+<div style="display:flex; flex-direction:column; gap:12px;"><h3 style="margin:0; font-size:26px; font-weight:600; letter-spacing:-0.03em;">Онлайн</h3><span style="align-self:flex-start; display:inline-flex; align-items:center; height:28px; padding:0 12px; border-radius:999px; border:1.5px solid var(--line); font-size:13px; font-weight:500;">По запросу</span></div>
+<div style="display:flex; flex-direction:column; gap:8px; padding-top:20px; border-top:1px solid var(--line);"><span style="font-size:clamp(36px,3.4vw,48px); line-height:1; font-weight:600; letter-spacing:-0.04em;">80 EUR</span><span style="font-size:15px; font-weight:600;">за занятие</span></div>
+<p style="margin:0; font-size:16px; line-height:1.45; color:var(--mut); flex:1;">Занятия онлайн, если нет возможности прийти в студию.</p>
+<a data-telegram="online" class="fx14 fx15" href="https://t.me/erotraverse_request_bot?start=online" target="_blank" rel="noopener" style="display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:56px; padding:6px 6px 6px 22px; border-radius:999px; background:#D1FF42; color:#0A0A0A; font-weight:600; font-size:16px; text-decoration:none; transition:transform .2s, background .2s;">Запросить онлайн<span style="flex:none; width:44px; height:44px; border-radius:50%; background:#0A0A0A; color:#D1FF42; display:inline-flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.8c-1.1.4-1.1 1.2-.2 1.5l4.6 1.4 1.7 5.4c.2.6.6.7 1.1.3l2.5-2.1 4.8 3.6c.8.5 1.4.2 1.6-.8l3-14.3c.3-1.2-.4-1.8-1.6-1.2Z"></path></svg></span></a>
+</article>
+</div>
+<div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px 24px; font-size:16px;">
+<span style="color:var(--mut);">Заявка ни к чему не обязывает</span>
+<a data-telegram="faq" href="https://t.me/erotraverse_request_bot?start=faq" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; min-height:44px; font-weight:600; color:var(--fg); text-decoration:underline; text-underline-offset:4px; text-decoration-thickness:1.5px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.8c-1.1.4-1.1 1.2-.2 1.5l4.6 1.4 1.7 5.4c.2.6.6.7 1.1.3l2.5-2.1 4.8 3.6c.8.5 1.4.2 1.6-.8l3-14.3c.3-1.2-.4-1.8-1.6-1.2Z"></path></svg>Задать вопрос в Telegram</a>
+</div>
+
+<div style="background:var(--card); border-radius:32px; padding:clamp(24px,4vw,56px); display:flex; flex-wrap:wrap; gap:clamp(28px,4vw,64px);">
+<div style="flex:1 1 300px; display:flex; flex-direction:column; gap:16px;">
+<h3 style="margin:0; font-size:clamp(32px,3.6vw,52px); line-height:1; font-weight:600; letter-spacing:-0.045em;">Или оставьте заявку здесь</h3>
+<p style="margin:0; font-size:17px; line-height:1.5; color:var(--mut); max-width:420px;">Напишите имя и контакт — мы сами свяжемся с вами и подберём время.</p>
+</div>
+<form id="lead-form" novalidate style="flex:1.4 1 360px; display:flex; flex-direction:column; gap:18px;">
+<label style="display:flex; flex-direction:column; gap:8px;"><span style="font-size:14px; font-weight:600;">Имя</span><input class="fx16" type="text" name="name" id="lead-name" maxlength="100" placeholder="Как к вам обращаться" autocomplete="name" style="height:56px; padding:0 20px; border-radius:16px; background:var(--bg); color:var(--fg); font-size:17px; outline:none; border:1.5px solid var(--line); transition:box-shadow .15s, border-color .15s;"><x-if data-if="errName" hidden><span style="display:flex; align-items:center; gap:8px; font-size:14px; font-weight:500;"><span style="flex:none; width:20px; height:20px; border-radius:50%; background:var(--fg); color:var(--bg); display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:700;">!</span>Напишите, как к вам обращаться</span></x-if></label>
+<label style="display:flex; flex-direction:column; gap:8px;"><span style="font-size:14px; font-weight:600;">Контакт</span><input class="fx17" type="text" name="contact" id="lead-contact" maxlength="100" placeholder="Телефон или @ник в Telegram" autocomplete="tel" style="height:56px; padding:0 20px; border-radius:16px; background:var(--bg); color:var(--fg); font-size:17px; outline:none; border:1.5px solid var(--line); transition:box-shadow .15s, border-color .15s;"><x-if data-if="errContact" hidden><span style="display:flex; align-items:center; gap:8px; font-size:14px; font-weight:500;"><span style="flex:none; width:20px; height:20px; border-radius:50%; background:var(--fg); color:var(--bg); display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:700;">!</span>Оставьте телефон или @ник в Telegram</span></x-if></label>
+<div role="radiogroup" aria-label="Формат" style="display:flex; flex-direction:column; gap:8px;"><span style="font-size:14px; font-weight:600;">Формат</span><div style="display:flex; flex-wrap:wrap; gap:8px;">
+<button type="button" role="radio" aria-checked="true" data-fmt="0" style="--fb:var(--fg); --fc:var(--bg); flex:1 1 auto; min-height:48px; padding:0 18px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer; border:1.5px solid var(--fg); background:var(--fb); color:var(--fc);">Одно занятие</button>
+<button type="button" role="radio" aria-checked="false" data-fmt="1" style="--fb:transparent; --fc:var(--fg); flex:1 1 auto; min-height:48px; padding:0 18px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer; border:1.5px solid var(--fg); background:var(--fb); color:var(--fc);">Абонемент</button>
+<button type="button" role="radio" aria-checked="false" data-fmt="2" style="--fb:transparent; --fc:var(--fg); flex:1 1 auto; min-height:48px; padding:0 18px; border-radius:999px; font-size:16px; font-weight:500; cursor:pointer; border:1.5px solid var(--fg); background:var(--fb); color:var(--fc);">Онлайн по запросу</button>
+</div></div>
+<button class="fx18 fx19" type="submit" style="margin-top:6px; display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:60px; padding:6px 6px 6px 24px; border-radius:999px; border:0; background:#D1FF42; color:#0A0A0A; font-weight:600; font-size:17px; cursor:pointer; opacity:1; transition:transform .2s, background .2s;"><x-if data-if="sending" hidden><span>Отправляем…</span></x-if><x-if data-if="notSending"><span>Отправить заявку</span></x-if><span style="flex:none; width:48px; height:48px; border-radius:50%; background:#0A0A0A; color:#D1FF42; display:inline-flex; align-items:center; justify-content:center;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg></span></button>
+<x-if data-if="success" hidden><div role="status" style="display:flex; align-items:flex-start; gap:14px; padding:18px 20px; border-radius:20px; background:var(--inv); color:var(--invfg); font-size:16px; line-height:1.45;"><span style="flex:none; width:28px; height:28px; border-radius:50%; background:#D1FF42; color:#0A0A0A; display:inline-flex; align-items:center; justify-content:center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5 10 17l9-10"></path></svg></span>Спасибо! Заявка отправлена — мы свяжемся с вами и подберём время.</div></x-if>
+<x-if data-if="netError" hidden><div role="alert" style="display:flex; align-items:flex-start; gap:14px; padding:18px 20px; border-radius:20px; border:1.5px solid var(--fg); font-size:16px; line-height:1.45;"><span style="flex:none; width:28px; height:28px; border-radius:50%; background:var(--fg); color:var(--bg); display:inline-flex; align-items:center; justify-content:center; font-weight:700;">!</span><span>Нет связи. Попробуйте ещё раз или напишите нам в <a data-telegram="faq" href="https://t.me/erotraverse_request_bot?start=faq" target="_blank" rel="noopener" style="font-weight:600; color:var(--fg);">Telegram</a>.</span></div></x-if>
+<div aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;"><label>Сайт <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div></form>
+</div>
+</div>
+</section>
+
+<footer data-screen-label="13 Подвал" data-tone="G" style="--bg:#EDEDED;--fg:#0A0A0A;--mut:#4F4F4F;--hg:#808080;--card:#FFFFFF;--line:#BDBDBD;--inv:#0A0A0A;--invfg:#FFFFFF;--giant:#0A0A0A;--stage:radial-gradient(ellipse 75% 65% at 50% 38%, #FFFFFF 0%, #E2E2E2 100%); background:var(--bg); color:var(--fg); padding:clamp(48px,6vw,80px) clamp(20px,4.5vw,64px) 0; overflow:hidden; border-top:1px solid var(--line);">
+<div style="max-width:1312px; margin:0 auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px 32px;">
+<div style="display:flex; flex-direction:column; gap:6px;"><span style="font-family:Oswald,sans-serif; font-weight:700; font-size:30px; letter-spacing:0.02em; line-height:1;">EROTRAVERSE</span><span style="font-size:15px; color:var(--mut);">Женский интимный фитнес · офлайн-тренировки</span></div>
+<a data-telegram="main" class="fx20" href="https://t.me/+a82C_hZYJG5iNzcy" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:12px; min-height:52px; padding:6px 6px 6px 22px; border-radius:999px; border:1.5px solid var(--fg); color:var(--fg); font-weight:600; font-size:16px; text-decoration:none; transition:background .2s;">Наш Telegram<span style="width:40px; height:40px; border-radius:50%; background:var(--fg); color:var(--bg); display:inline-flex; align-items:center; justify-content:center;"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.8c-1.1.4-1.1 1.2-.2 1.5l4.6 1.4 1.7 5.4c.2.6.6.7 1.1.3l2.5-2.1 4.8 3.6c.8.5 1.4.2 1.6-.8l3-14.3c.3-1.2-.4-1.8-1.6-1.2Z"></path></svg></span></a>
+</div>
+<div aria-hidden="true" style="max-width:1312px; margin:clamp(32px,4vw,56px) auto 0; font-family:Oswald,sans-serif; font-weight:700; font-size:clamp(70px,16.6vw,240px); line-height:0.78; text-align:center; color:var(--line); letter-spacing:-0.005em; transform:translateY(8%);">EROTRAVERSE</div>
+</footer>
 
 </main>
 
-<footer class="footer">
-  <div class="wrap">
-    <span class="logo">EROTRAVERSE</span>
-    <span>Женский интимный фитнес · офлайн-тренировки</span>
-    <a href="https://t.me/+a82C_hZYJG5iNzcy" data-telegram="main" target="_blank" rel="noopener">Наш Telegram</a>
-  </div>
-</footer>
-
+<script src="js/poses.js"></script>
 <script>
-  // Ссылки на Telegram — у каждой кнопки своя.
-  // Именные пригласительные ссылки показывают в Telegram, кто по какой кнопке пришёл.
+(function () {
+  // Ссылки на Telegram — у каждой кнопки своя (метка после ?start= сообщает боту формат)
   var TELEGRAM_LINKS = {
-    main: "https://t.me/+a82C_hZYJG5iNzcy",          // канал («Наш Telegram» внизу)
-    // Кнопки записи ведут в бота; метка после ?start= сообщает боту, какой формат выбран
-    trial: "https://t.me/erotraverse_request_bot?start=trial",         // «Одно занятие»
-    subscription: "https://t.me/erotraverse_request_bot?start=pass",   // «Абонемент»
-    online: "https://t.me/erotraverse_request_bot?start=online",       // «Онлайн по запросу»
-    faq: "https://t.me/erotraverse_request_bot?start=faq"              // «Цены и частые вопросы»
+    main: "https://t.me/+a82C_hZYJG5iNzcy",
+    trial: "https://t.me/erotraverse_request_bot?start=trial",
+    subscription: "https://t.me/erotraverse_request_bot?start=pass",
+    online: "https://t.me/erotraverse_request_bot?start=online",
+    faq: "https://t.me/erotraverse_request_bot?start=faq"
   };
-
   document.querySelectorAll("[data-telegram]").forEach(function (link) {
     link.href = TELEGRAM_LINKS[link.getAttribute("data-telegram")] || TELEGRAM_LINKS.main;
   });
 
-  // Форма заявки: отправляется в приёмник на Railway и сохраняется в базу
-  var LEADS_API = "https://api-production-005a.up.railway.app/api/leads";
-  var form = document.getElementById("lead-form");
-  var statusBox = document.getElementById("lead-status");
+  function shown(box, on) { if (box) box.hidden = !on; }
 
-  function showStatus(text, ok) {
-    statusBox.hidden = false;
-    statusBox.textContent = text;
-    statusBox.className = "form-status " + (ok ? "ok" : "error");
+  // Шапка, которая появляется при прокрутке
+  var bar = document.getElementById("bar");
+  function onScroll() { if (bar) bar.classList.toggle("off", window.scrollY <= window.innerHeight * 0.9); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // Раскрывающиеся кнопки: вопросы (открыт один) и «противопоказания»
+  function setOpen(btn, on) {
+    btn.setAttribute("aria-expanded", on ? "true" : "false");
+    btn.style.setProperty("--ib", on ? "#D1FF42" : "transparent");
+    btn.style.setProperty("--rot", on ? "45deg" : "0deg");
+    shown(btn.nextElementSibling, on);
   }
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    var nameInput = form.elements.namedItem("name");
-    var contactInput = form.elements.namedItem("contact");
-    var name = nameInput.value.trim();
-    var contact = contactInput.value.trim();
-    if (!name) { showStatus("Напишите, как к вам обращаться", false); nameInput.focus(); return; }
-    if (contact.length < 5) { showStatus("Оставьте телефон или @ник в Telegram", false); contactInput.focus(); return; }
-
-    var button = form.querySelector('button[type="submit"]');
-    button.disabled = true;
-    button.textContent = "Отправляем…";
-    fetch(LEADS_API, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: name,
-        contact: contact,
-        format: form.elements.namedItem("format").value,
-        website: form.elements.namedItem("website").value
-      })
-    }).then(function (response) {
-      return response.json().catch(function () { return {}; }).then(function (body) {
-        return { ok: response.ok && body.ok, body: body };
-      });
-    }).then(function (result) {
-      if (result.ok) {
-        form.reset();
-        showStatus("Спасибо! Заявка отправлена — мы свяжемся с вами и подберём время.", true);
-      } else {
-        showStatus(result.body.error || "Не получилось отправить. Попробуйте ещё раз или напишите нам в Telegram.", false);
-      }
-    }).catch(function () {
-      showStatus("Нет связи. Попробуйте ещё раз или напишите нам в Telegram.", false);
-    }).then(function () {
-      button.disabled = false;
-      button.textContent = "Отправить заявку";
+  var faqs = Array.prototype.slice.call(document.querySelectorAll("[data-faq]"));
+  faqs.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var willOpen = btn.getAttribute("aria-expanded") !== "true";
+      faqs.forEach(function (b) { setOpen(b, false); });
+      setOpen(btn, willOpen);
     });
   });
+  document.querySelectorAll('[data-toggle="contra"]').forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var on = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", on ? "true" : "false");
+      btn.style.setProperty("--ib", on ? "#D1FF42" : "transparent");
+      btn.style.setProperty("--rot", on ? "45deg" : "0deg");
+      shown(document.querySelector('x-if[data-if="contra"]'), on);
+    });
+  });
+
+  // Форма заявки: отправляется в приёмник на Railway и сохраняется в базу
+  var LEADS_API = "https://api-production-005a.up.railway.app/api/leads";
+  var FORMATS = ["trial", "pass", "online"];
+  var form = document.getElementById("lead-form");
+  if (form) {
+    var fmt = 0;
+    var fmtBtns = form.querySelectorAll("[data-fmt]");
+    fmtBtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        fmt = +b.getAttribute("data-fmt");
+        fmtBtns.forEach(function (x) {
+          var on = x === b;
+          x.setAttribute("aria-checked", on ? "true" : "false");
+          x.style.setProperty("--fb", on ? "var(--fg)" : "transparent");
+          x.style.setProperty("--fc", on ? "var(--bg)" : "var(--fg)");
+        });
+      });
+    });
+    var nameInput = document.getElementById("lead-name");
+    var contactInput = document.getElementById("lead-contact");
+    var box = function (k) { return form.querySelector('x-if[data-if="' + k + '"]'); };
+    function mark(input, err, on) {
+      shown(box(err), on);
+      input.style.border = on ? "2px solid var(--fg)" : "1.5px solid var(--line)";
+    }
+    nameInput.addEventListener("input", function () { mark(nameInput, "errName", false); });
+    contactInput.addEventListener("input", function () { mark(contactInput, "errContact", false); });
+    var sending = false;
+    var submitBtn = form.querySelector('button[type="submit"]');
+    function setSending(on) {
+      sending = on;
+      shown(box("sending"), on); shown(box("notSending"), !on);
+      submitBtn.style.opacity = on ? "0.7" : "1";
+      submitBtn.disabled = on;
+    }
+    var netBox = box("netError");
+    var netText = netBox && netBox.querySelector("div > span:last-child");
+    var netDefault = netText ? netText.innerHTML : "";
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (sending) return;
+      var name = nameInput.value.trim(), contact = contactInput.value.trim();
+      shown(box("success"), false); shown(netBox, false);
+      mark(nameInput, "errName", !name);
+      mark(contactInput, "errContact", contact.length < 5);
+      if (!name) { nameInput.focus(); return; }
+      if (contact.length < 5) { contactInput.focus(); return; }
+      setSending(true);
+      fetch(LEADS_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name, contact: contact, format: FORMATS[fmt], website: form.elements.namedItem("website").value })
+      }).then(function (response) {
+        return response.json().catch(function () { return {}; }).then(function (body) { return { ok: response.ok && body.ok, body: body }; });
+      }).then(function (result) {
+        if (result.ok) { form.reset(); shown(box("success"), true); }
+        else {
+          if (netText) netText.innerHTML = result.body && result.body.error
+            ? String(result.body.error).replace(/</g, "&lt;")
+            : 'Не получилось отправить. Попробуйте ещё раз или напишите нам в <a href="' + TELEGRAM_LINKS.faq + '" target="_blank" rel="noopener" style="font-weight:600; color:var(--fg);">Telegram</a>.';
+          shown(netBox, true);
+        }
+      }).catch(function () {
+        if (netText) netText.innerHTML = netDefault;
+        shown(netBox, true);
+      }).then(function () { setSending(false); });
+    });
+  }
+
+  // Часы: 12 неоновых поз вместо цифр, идут по времени посетительницы
+  var posesG = document.getElementById("poses");
+  if (posesG && window.POSES) {
+    var R = 136, SCALE = 0.74;
+    POSES.forEach(function (p, h) {
+      var a = h * 30 * Math.PI / 180;
+      var cx = 200 + R * Math.sin(a), cy = 200 - R * Math.cos(a);
+      var g = el("g", { transform: "translate(" + (cx - 50 * SCALE) + " " + (cy - 36 * SCALE) + ") scale(" + SCALE + ")" }, posesG);
+      el("title", {}, g).textContent = p.name;
+      drawPose(p, g, "#39FF14");
+    });
+    var H = document.getElementById("c-hour"), M = document.getElementById("c-minute"), S = document.getElementById("c-second");
+    var tick = function () {
+      var d = new Date(), s = d.getSeconds(), m = d.getMinutes() + s / 60, hr = (d.getHours() % 12) + m / 60;
+      H.setAttribute("transform", "rotate(" + hr * 30 + " 200 200)");
+      M.setAttribute("transform", "rotate(" + m * 6 + " 200 200)");
+      S.setAttribute("transform", "rotate(" + s * 6 + " 200 200)");
+    };
+    tick(); setInterval(tick, 1000);
+  }
+})();
+
 </script>
 </body>
 </html>
